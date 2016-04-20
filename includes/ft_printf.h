@@ -6,7 +6,7 @@
 /*   By: cledant <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/19 10:55:21 by cledant           #+#    #+#             */
-/*   Updated: 2016/04/20 18:49:46 by cledant          ###   ########.fr       */
+/*   Updated: 2016/04/20 19:53:05 by cledant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ typedef struct	flags
 	int			sign;
 	int			precision;
 	size_t		preci_size;
-	int			double_%;
+	int			double_pc;
 	int			length;
 	size_t		type;
 }				t_flags;
@@ -41,5 +41,9 @@ int				ft_printf_print_args(t_flags flag, va_list list_arg);
 int				ft_printf_is_converter(char *format);
 int				ft_printf_is_modifier(char *format);
 int				ft_printf_is_flag(char *format);
+void			ft_printf_fill_flag(char *format, t_flags *data);
+void			ft_printf_fill_converter(char *format, t_flags *data);
+void			ft_printf_fill_modifier(char *format, t_flags *data);
+int				ft_printf_d(va_list list_arg);
 
 #endif

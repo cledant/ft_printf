@@ -1,28 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf_init_data.c                              :+:      :+:    :+:   */
+/*   ft_printf_print_args.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cledant <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/04/20 16:59:21 by cledant           #+#    #+#             */
-/*   Updated: 2016/04/20 19:49:03 by cledant          ###   ########.fr       */
+/*   Created: 2016/04/20 19:21:49 by cledant           #+#    #+#             */
+/*   Updated: 2016/04/20 19:39:21 by cledant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_printf_init_data(t_flags *data)
+int		ft_printf_print_args(t_flags flag, va_list list_arg)
 {
-	data->space = 0;
-	data->sharp = 0;
-	data->pad_zero = 0;
-	data->pad_space = 0;
-	data->pad_size = 0;
-	data->sign = 0;
-	data->precision = 0;
-	data->preci_size = 0;
-	data->double_pc = 0;
-	data->length = 0;
-	data->type = 0;
+	int		len;
+
+	len = 0;
+	if (flag.type == 3)
+		len = ft_printf_d(list_arg);
+	return len;
 }
