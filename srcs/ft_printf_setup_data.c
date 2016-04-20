@@ -1,0 +1,52 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_printf_setup_data.c                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: cledant <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2016/04/20 18:29:24 by cledant           #+#    #+#             */
+/*   Updated: 2016/04/20 18:49:48 by cledant          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "ft_printf.h"
+
+void		*ft_printf_setup_data(char *data, t_flags *flag)
+{
+	char	*cpy_data
+
+	flag_flag = 6;
+	cpy_data = data;
+	if (ft_strncmp(cpy_data, "%", 1) == 0)
+	{
+		flag->double_% = 1;
+		return ;
+	}
+	while (*cpy_data != '\0' && ft_printf_is_flag(cpy_data) == 1)
+	{
+		ft_printf_fill_flag(flag, cpy_data);
+		cpy_data++;
+	}
+	if (*cpy_data != '\0' && ft_isdigit(*cpy_data) == 1)
+	{
+		flag->pad_size = ft_atoi(cpy_data);
+		while (*cpy_data != '\0' && ft_isdigit(*cpy_data) == 1)
+			cpy_data++;
+	}
+	if (*cpy_data != '\0' && ft_strncmp(cpy_data, ".", 1) == 0)
+		flag->precision = 1;
+	if (*cpy_data != '\0' && ft_isdigit(*cpy_data) == 1)
+	{
+		flag->preci_size = ft_atoi(cpy_data);
+		while (*cpy_data != '\0' && ft_isdigit(*cpy_data) == 1)
+			cpy_data++;
+	}
+	while (*cpy_data != '\0' && (res_flag_2 = ft_printf_is_modifier(cpy_data)) > 0)
+	{
+		ft_printf_fill_modifier(flag, cpy_data);
+		cpy_data++;
+	}
+	if (*cpy_data != '\0' && ft_printf_is_converter(cpy_data) == 1)
+		ft_printf_fill_coverter(flag, cpy_data);
+}
