@@ -1,27 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf_print_args.c                             :+:      :+:    :+:   */
+/*   ft_printf_putnbr_unsigned.c                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cledant <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/04/20 19:21:49 by cledant           #+#    #+#             */
-/*   Updated: 2016/04/21 17:25:26 by cledant          ###   ########.fr       */
+/*   Created: 2016/04/21 17:57:42 by cledant           #+#    #+#             */
+/*   Updated: 2016/04/21 18:02:32 by cledant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
-int		ft_printf_print_args(t_flags *flag, va_list list_arg)
+void	ft_printf_putnbr_unsigned(unsigned int n)
 {
-	int		len;
+	unsigned int	tmp;
 
-	len = 0;
-	if (flag->type == 3)
-		len = ft_printf_d(list_arg);
-	else if (flag->type == 5)
-		len = ft_printf_d(list_arg);
-	else if (flag->type == 8)
-		len = ft_printf_u(list_arg);
-	return len;
+	tmp = 0;
+	tmp = n % 10;
+	if (n >= 10)
+		ft_printf_putnbr_unsigned(n / 10);
+	ft_putchar(tmp + '0');
 }

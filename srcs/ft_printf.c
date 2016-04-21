@@ -6,7 +6,7 @@
 /*   By: cledant <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/19 11:30:42 by cledant           #+#    #+#             */
-/*   Updated: 2016/04/21 17:00:09 by cledant          ###   ########.fr       */
+/*   Updated: 2016/04/21 17:35:59 by cledant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,11 @@ int		ft_printf(const char* restrict format, ...)
 	size_t	ret_parse;
 	int		skip;
 	char	*cpy_format;
+	char	*cpy_format_2;
 
 	if ((cpy_format = ft_strdup(format)) == NULL)
 		return 0;
+	cpy_format_2 = cpy_format;
 	read_char = 0;
 	va_start(list_arg, format);
 	while (*cpy_format != '\0')
@@ -50,7 +52,7 @@ int		ft_printf(const char* restrict format, ...)
 		ret_parse = 0;
 	}
 	ft_putchar('\0');
-	ft_strdel(&cpy_format);
+	ft_strdel(&cpy_format_2);
 	va_end(list_arg);
 	return (read_char);
 }

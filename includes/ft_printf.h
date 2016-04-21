@@ -6,7 +6,7 @@
 /*   By: cledant <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/19 10:55:21 by cledant           #+#    #+#             */
-/*   Updated: 2016/04/21 16:48:25 by cledant          ###   ########.fr       */
+/*   Updated: 2016/04/21 18:50:59 by cledant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,5 +44,8 @@ void			ft_printf_fill_flag(char *format, t_flags *data);
 void			ft_printf_fill_converter(char *format, t_flags *data);
 void			ft_printf_fill_modifier(char *format, t_flags *data);
 int				ft_printf_d(va_list list_arg);
+int				ft_printf_u(va_list list_arg);
+void			ft_printf_putnbr_unsigned(unsigned int n);
+char			*ft_printf_itoa_unsigned(unsigned int n);
 
 #endif

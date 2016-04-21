@@ -1,27 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf_print_args.c                             :+:      :+:    :+:   */
+/*   ft_printf_u.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cledant <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/04/20 19:21:49 by cledant           #+#    #+#             */
-/*   Updated: 2016/04/21 17:25:26 by cledant          ###   ########.fr       */
+/*   Created: 2016/04/20 19:39:30 by cledant           #+#    #+#             */
+/*   Updated: 2016/04/21 18:52:37 by cledant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int		ft_printf_print_args(t_flags *flag, va_list list_arg)
+int		ft_printf_u(va_list list_arg)
 {
-	int		len;
+	int					val;
+	unsigned int		disp_val;
+	int					len;
+	char				*s_val;
 
-	len = 0;
-	if (flag->type == 3)
-		len = ft_printf_d(list_arg);
-	else if (flag->type == 5)
-		len = ft_printf_d(list_arg);
-	else if (flag->type == 8)
-		len = ft_printf_u(list_arg);
+	val = va_arg(list_arg, int);
+	if (val < 0)
+		disp_val = (unsigned int)val;
+	else
+		disp_val = val;
+	ft_printf_putnbr_unsigned(disp_val);
+	s_val = ft_printf_itoa_unsigned(disp_val);
+	len = ft_strlen(s_val);
+	ft_strdel(&s_val);
 	return len;
 }
