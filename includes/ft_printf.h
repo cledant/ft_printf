@@ -6,7 +6,7 @@
 /*   By: cledant <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/19 10:55:21 by cledant           #+#    #+#             */
-/*   Updated: 2016/04/20 19:53:05 by cledant          ###   ########.fr       */
+/*   Updated: 2016/04/21 10:38:14 by cledant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,6 @@ typedef struct	flags
 	size_t		type;
 }				t_flags;
 
-int				ft_printf(const char* restrict format, ...);
 char			*ft_printf_analyse_string(char *format);
 size_t			ft_printf_parse_type(char *format, va_list list_arg,
 					int *skip);

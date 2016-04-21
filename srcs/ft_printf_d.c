@@ -1,27 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf_fill_flag.c                              :+:      :+:    :+:   */
+/*   ft_printf_d.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cledant <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/04/20 18:59:59 by cledant           #+#    #+#             */
-/*   Updated: 2016/04/21 09:45:19 by cledant          ###   ########.fr       */
+/*   Created: 2016/04/20 19:39:30 by cledant           #+#    #+#             */
+/*   Updated: 2016/04/21 09:47:26 by cledant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_printf_fill_flag(char *format, t_flags *data)
+int		ft_printf_d(va_list list_arg)
 {
-	if (ft_strncmp(format, "#", 1) == 0)
-		data->sharp = 1;
-	else if (ft_strncmp(format, "0", 1) == 0)
-		data->pad_zero = 1;
-	else if (ft_strncmp(format, "+", 1) == 0)
-		data->sign = 1;
-	else if (ft_strncmp(format, "-", 1) == 0)
-		data->pad_space = 1;
-	else if (ft_strncmp(format, " ", 1) == 0)
-		data->space = 1;
+	int		val;
+	int		len;
+	char	*s_val;
+
+	val = va_arg(list_arg, int);
+	ft_putnbr(val);
+	s_val = ft_itoa(val);
+	len = ft_strlen(s_val);
+	ft_strdel(&s_val);
+	return len;
 }

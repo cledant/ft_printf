@@ -6,40 +6,40 @@
 /*   By: cledant <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/20 19:16:12 by cledant           #+#    #+#             */
-/*   Updated: 2016/04/20 19:17:05 by cledant          ###   ########.fr       */
+/*   Updated: 2016/04/21 09:46:26 by cledant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_printf_fill_modifier(char *format, t_flags *data)
+void	ft_printf_fill_converter(char *format, t_flags *data)
 {
-	if (*format == "s")
+	if (ft_strncmp(format, "s", 1) == 0)
 		data->type = 0 ;
-	else if (*format == "S")
+	else if (ft_strncmp(format, "S", 1) == 0)
 		data->type = 1;
-	else if (*format == "p")
+	else if (ft_strncmp(format, "p", 1) == 0)
 		data->type = 2;
-	else if (*format == "d")
+	else if (ft_strncmp(format, "d", 1) == 0)
 		data->type = 3;
-	else if (*format == "D")
+	else if (ft_strncmp(format, "D", 1) == 0)
 		data->type = 4;
-	else if (*format == "i")
+	else if (ft_strncmp(format, "i", 1) == 0)
 		data->type = 5;
-	else if (*format == "o")
+	else if (ft_strncmp(format, "o", 1) == 0)
 		data->type = 6;
-	else if (*format == "O")
+	else if (ft_strncmp(format, "O", 1) == 0)
 		data->type = 7;
-	else if (*format == "u")
+	else if (ft_strncmp(format, "u", 1) == 0)
 		data->type = 8;
-	else if (*format == "U")
+	else if (ft_strncmp(format, "U", 1) == 0)
 		data->type = 9;
-	else if (*format == "x")
+	else if (ft_strncmp(format, "x", 1) == 0)
 		data->type = 10;
-	else if (*format == "X")
+	else if (ft_strncmp(format, "X", 1) == 0)
 		data->type = 11;
-	else if (*format == "c")
+	else if (ft_strncmp(format, "c", 1) == 0)
 		data->type = 12;
-	else if (*format == "C")
+	else if (ft_strncmp(format, "C", 1) == 0)
 		data->type = 13;
 }
