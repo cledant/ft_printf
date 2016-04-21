@@ -6,7 +6,7 @@
 /*   By: cledant <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/19 14:25:34 by cledant           #+#    #+#             */
-/*   Updated: 2016/04/21 11:20:10 by cledant          ###   ########.fr       */
+/*   Updated: 2016/04/21 16:48:24 by cledant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ size_t			ft_printf_parse_type(char *format, va_list list_arg,
 		ft_printf_init_data(&flag);
 		ft_printf_setup_data(parse, &flag);
 		ret = ft_strlen(parse);
-		*nb_print += ft_printf_print_args(flag, list_arg);
+		*nb_print += ft_printf_print_args(&flag, list_arg);
 		if (ft_strcmp(parse, "%") == 0)
 			*skip = 1;
 		ft_strdel(&parse);

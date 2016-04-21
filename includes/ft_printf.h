@@ -6,7 +6,7 @@
 /*   By: cledant <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/19 10:55:21 by cledant           #+#    #+#             */
-/*   Updated: 2016/04/21 11:19:23 by cledant          ###   ########.fr       */
+/*   Updated: 2016/04/21 16:48:25 by cledant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ size_t			ft_printf_parse_type(char *format, va_list list_arg,
 					int *skip, size_t *nb_print);
 void			ft_printf_init_data(t_flags *data);
 void			ft_printf_setup_data(char *data, t_flags *flag);
-int				ft_printf_print_args(t_flags flag, va_list list_arg);
+int				ft_printf_print_args(t_flags *flag, va_list list_arg);
 int				ft_printf_is_converter(char *format);
 int				ft_printf_is_modifier(char *format);
 int				ft_printf_is_flag(char *format);
