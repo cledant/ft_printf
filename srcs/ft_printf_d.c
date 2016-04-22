@@ -6,7 +6,7 @@
 /*   By: cledant <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/20 19:39:30 by cledant           #+#    #+#             */
-/*   Updated: 2016/04/21 09:47:26 by cledant          ###   ########.fr       */
+/*   Updated: 2016/04/22 13:01:48 by cledant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,9 @@ int		ft_printf_d(va_list list_arg)
 
 	val = va_arg(list_arg, int);
 	ft_putnbr(val);
-	s_val = ft_itoa(val);
+	if ((s_val = ft_itoa(val)) == NULL)
+		return (0);
 	len = ft_strlen(s_val);
 	ft_strdel(&s_val);
-	return len;
+	return (len);
 }

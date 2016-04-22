@@ -1,33 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf_u.c                                      :+:      :+:    :+:   */
+/*   ft_strtoupper.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cledant <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/04/20 19:39:30 by cledant           #+#    #+#             */
-/*   Updated: 2016/04/22 13:01:17 by cledant          ###   ########.fr       */
+/*   Created: 2016/04/22 10:27:53 by cledant           #+#    #+#             */
+/*   Updated: 2016/04/22 10:31:25 by cledant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int		ft_printf_u(va_list list_arg)
+void	ft_strtoupper(char *s)
 {
-	int					val;
-	unsigned int		disp_val;
-	int					len;
-	char				*s_val;
-
-	val = va_arg(list_arg, int);
-	if (val < 0)
-		disp_val = (unsigned int)val;
-	else
-		disp_val = val;
-	ft_printf_putnbr_unsigned(disp_val);
-	if ((s_val = ft_printf_itoa_unsigned(disp_val)) == NULL)
-		return (0);
-	len = ft_strlen(s_val);
-	ft_strdel(&s_val);
-	return len;
+	while (*s != '\0')
+	{
+		if (ft_isalpha(*s) == 1)
+			*s = ft_toupper(*s);
+		s++;
+	}
 }

@@ -6,7 +6,7 @@
 #    By: cledant <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/11/26 10:40:13 by cledant           #+#    #+#              #
-#    Updated: 2016/04/21 18:48:58 by cledant          ###   ########.fr        #
+#    Updated: 2016/04/22 12:22:52 by cledant          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,7 +23,9 @@ SRC_NAME =	ft_printf.c ft_printf_is_converter.c ft_printf_analyse_string.c \
 			ft_printf_parse_type.c ft_printf_fill_flag.c ft_printf_print_args.c \
 			ft_printf_fill_modifier.c ft_printf_setup_data.c ft_printf_init_data.c \
 			ft_printf_d.c ft_printf_u.c ft_printf_putnbr_unsigned.c \
-			ft_printf_itoa_unsigned.c
+			ft_printf_itoa_unsigned.c ft_printf_o.c ft_printf_octal_converter.c \
+			ft_printf_xX.c ft_printf_hex_converter.c ft_strtoupper.c \
+			ft_printf_ld.c ft_printf_itoa_long_int.c ft_printf_putnbr_long_int.c
 
 SRC_PATH = ./srcs/
 

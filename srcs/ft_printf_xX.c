@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf_u.c                                      :+:      :+:    :+:   */
+/*   ft_printf_xX.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cledant <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/04/20 19:39:30 by cledant           #+#    #+#             */
-/*   Updated: 2016/04/22 13:01:17 by cledant          ###   ########.fr       */
+/*   Created: 2016/04/22 09:26:17 by cledant           #+#    #+#             */
+/*   Updated: 2016/04/22 10:31:57 by cledant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int		ft_printf_u(va_list list_arg)
+int		ft_printf_xX(va_list list_arg, int maj)
 {
 	int					val;
 	unsigned int		disp_val;
@@ -24,10 +24,12 @@ int		ft_printf_u(va_list list_arg)
 		disp_val = (unsigned int)val;
 	else
 		disp_val = val;
-	ft_printf_putnbr_unsigned(disp_val);
-	if ((s_val = ft_printf_itoa_unsigned(disp_val)) == NULL)
+	if ((s_val = ft_printf_hex_converter(disp_val)) == NULL)
 		return (0);
 	len = ft_strlen(s_val);
+	if (maj == 1)
+		ft_strtoupper(s_val);
+	ft_putstr(s_val);
 	ft_strdel(&s_val);
-	return len;
+	return (len);
 }
