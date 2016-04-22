@@ -1,33 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf_u.c                                      :+:      :+:    :+:   */
+/*   ft_printf_lu.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cledant <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/20 19:39:30 by cledant           #+#    #+#             */
-/*   Updated: 2016/04/22 16:28:54 by cledant          ###   ########.fr       */
+/*   Updated: 2016/04/22 14:36:58 by cledant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int		ft_printf_u(va_list list_arg)
+int		ft_printf_lu(va_list list_arg)
 {
-	int					val;
-	unsigned int		disp_val;
+	long int			val;
+	unsigned long int	disp_val;
 	int					len;
 	char				*s_val;
 
-	val = va_arg(list_arg, int);
+	val = va_arg(list_arg, long int);
 	if (val < 0)
-		disp_val = (unsigned int)val;
+		disp_val = (unsigned long int)val;
 	else
 		disp_val = val;
-	ft_printf_putnbr_unsigned(disp_val);
-	if ((s_val = ft_printf_itoa_unsigned(disp_val)) == NULL)
+	ft_printf_putnbr_unsigned_long_int(disp_val);
+	if ((s_val = ft_printf_itoa_unsigned_long_int(disp_val)) == NULL)
 		return (0);
 	len = ft_strlen(s_val);
 	ft_strdel(&s_val);
-	return len;
+	return (len);
 }

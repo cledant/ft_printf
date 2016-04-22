@@ -1,24 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test.c                                             :+:      :+:    :+:   */
+/*   ft_printf_lo.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cledant <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/04/19 11:33:20 by cledant           #+#    #+#             */
-/*   Updated: 2016/04/22 16:25:21 by cledant          ###   ########.fr       */
+/*   Created: 2016/04/22 09:26:17 by cledant           #+#    #+#             */
+/*   Updated: 2016/04/22 13:29:52 by cledant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-#include <stdio.h>
-#include <limits.h>
+#include "ft_printf.h"
 
-int		main(void)
+int		ft_printf_lo(va_list list_arg)
 {
-//	printf("%%d%   #   +++ --- 12.12dfsdsdf %hhx80vtest", 42, 12, 1);
-//	ft_printf("coucou toussa%  %+ - -%-000---  #3.3d%d%x%X122%d%%d%dd", 11, 2, 3, 4);
-//	ft_printf("coucou test %d\n", 8);
-	printf("%hhu / %hhu", SHRT_MAX - 42, SHRT_MAX - 4200);
-	ft_printf("%hhu / %hhu", SHRT_MAX - 42, SHRT_MAX - 4200);
+	long int			val;
+	unsigned long int	disp_val;
+	int					len;
+	char				*s_val;
+
+	val = va_arg(list_arg, long int);
+	if (val < 0)
+		disp_val = (unsigned long int)val;
+	else
+		disp_val = val;
+	if ((s_val = ft_printf_octal_converter_long_int(disp_val)) == NULL)
+		return (0);
+	len = ft_strlen(s_val);
+	ft_putstr(s_val);
+	ft_strdel(&s_val);
+	return (len);
 }
