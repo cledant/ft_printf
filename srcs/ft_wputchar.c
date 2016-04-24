@@ -1,26 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen_unicode.c                                :+:      :+:    :+:   */
+/*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cledant <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/04/22 16:46:09 by cledant           #+#    #+#             */
-/*   Updated: 2016/04/22 17:25:30 by cledant          ###   ########.fr       */
+/*   Created: 2015/11/24 08:19:32 by cledant           #+#    #+#             */
+/*   Updated: 2016/04/24 14:46:49 by cledant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen_unicode(wchar_t *s)
+void	ft_wputchar(wchar_t c)
 {
-	size_t length;
-
-	length = 0;
-	while (*s != '\0')
-	{
-		length += sizeof(*s);
-		s++;
-	}
-	return (length);
+	write(1, &c, 2);
 }

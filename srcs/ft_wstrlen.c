@@ -1,22 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_unicode.c                                :+:      :+:    :+:   */
+/*   ft_strlen_unicode.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cledant <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/04/22 16:40:07 by cledant           #+#    #+#             */
-/*   Updated: 2016/04/22 17:23:50 by cledant          ###   ########.fr       */
+/*   Created: 2016/04/22 16:46:09 by cledant           #+#    #+#             */
+/*   Updated: 2016/04/24 14:46:19 by cledant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr_unicode(wchar_t *s)
+size_t	ft_wstrlen(wchar_t *s)
 {
+	size_t length;
+
+	length = 0;
 	while (*s != '\0')
 	{
-		write(1, s, sizeof(*s));
+		length += sizeof(*s);
 		s++;
 	}
+	return (length);
 }

@@ -6,7 +6,7 @@
 /*   By: cledant <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/22 16:41:52 by cledant           #+#    #+#             */
-/*   Updated: 2016/04/22 16:48:08 by cledant          ###   ########.fr       */
+/*   Updated: 2016/04/24 14:49:32 by cledant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int		ft_printf_ls(va_list list_arg)
 	}
 	if (*val == '\0')
 		return (0);
-	ft_putstr_unicode(val);
-	len = ft_strlen_unicode(val);
+	ft_wputstr(val);
+	len = ft_wstrlen(val);
 	return (len);
 }

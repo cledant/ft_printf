@@ -6,7 +6,7 @@
 #    By: cledant <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/11/26 10:40:13 by cledant           #+#    #+#              #
-#    Updated: 2016/04/22 17:53:12 by cledant          ###   ########.fr        #
+#    Updated: 2016/04/24 14:47:16 by cledant          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,14 +22,14 @@ SRC_NAME =	ft_printf.c ft_printf_is_converter.c ft_printf_analyse_string.c \
 			ft_printf_is_flag.c ft_printf_is_modifier.c ft_printf_fill_converter.c \
 			ft_printf_parse_type.c ft_printf_fill_flag.c ft_printf_print_args.c \
 			ft_printf_fill_modifier.c ft_printf_setup_data.c ft_printf_init_data.c \
-			ft_printf_d.c ft_printf_u.c ft_printf_putnbr_unsigned.c \
+			ft_printf_d.c ft_printf_u.c \
 			ft_printf_itoa_unsigned.c ft_printf_o.c ft_printf_octal_converter.c \
 			ft_printf_xX.c ft_printf_hex_converter.c ft_strtoupper.c \
-			ft_printf_ld.c ft_printf_itoa_long_int.c ft_printf_putnbr_long_int.c \
+			ft_printf_ld.c ft_printf_itoa_long_int.c \
 			ft_printf_lo.c ft_printf_octal_converter_long_int.c ft_printf_lu.c \
-			ft_printf_itoa_unsigned_long_int.c ft_printf_putnbr_unsigned_long.c \
-			ft_printf_s.c ft_printf_c.c ft_putstr_unicode.c ft_printf_ls.c \
-			ft_strlen_unicode.c ft_putchar_unicode.c ft_printf_lc.c
+			ft_printf_itoa_unsigned_long_int.c \
+			ft_printf_s.c ft_printf_c.c ft_wputstr.c ft_printf_ls.c \
+			ft_wstrlen.c ft_wputchar.c ft_printf_lc.c
 
 SRC_PATH = ./srcs/
 

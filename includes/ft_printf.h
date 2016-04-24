@@ -6,7 +6,7 @@
 /*   By: cledant <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/19 10:55:21 by cledant           #+#    #+#             */
-/*   Updated: 2016/04/22 17:55:01 by cledant          ###   ########.fr       */
+/*   Updated: 2016/04/24 14:37:51 by cledant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,15 +58,15 @@ int				ft_printf_xX(va_list list_arg, int maj);
 char			*ft_printf_octal_converter(unsigned int n);
 char			*ft_printf_hex_converter(unsigned int n);
 char			*ft_printf_octal_converter_long_int(unsigned long int n);
-void			ft_printf_putnbr_unsigned(unsigned int n);
+//void			ft_printf_putnbr_unsigned(unsigned int n);
 char			*ft_printf_itoa_unsigned(unsigned int n);
-void			ft_printf_putnbr_long_int(long int n);
+//void			ft_printf_putnbr_long_int(long int n);
 char			*ft_printf_itoa_long_int(long int n);
-void			ft_printf_putnbr_unsigned_long_int(unsigned long int n);
+//void			ft_printf_putnbr_unsigned_long_int(unsigned long int n);
 char			*ft_printf_itoa_unsigned_long_int(unsigned long int n);
 void			ft_strtoupper(char *s);
-void			ft_putchar_unicode(wchar_t c);
-void			ft_putstr_unicode(wchar_t *s);
-size_t			ft_strlen_unicode(wchar_t *s);
+void			ft_wputchar(wchar_t c);
+void			ft_wputstr(wchar_t *s);
+size_t			ft_wstrlen(wchar_t *s);
 
 #endif
