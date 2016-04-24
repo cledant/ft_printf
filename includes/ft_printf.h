@@ -6,7 +6,7 @@
 /*   By: cledant <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/19 10:55:21 by cledant           #+#    #+#             */
-/*   Updated: 2016/04/24 14:37:51 by cledant          ###   ########.fr       */
+/*   Updated: 2016/04/24 16:26:32 by cledant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,7 @@ int				ft_printf_ld(va_list list_arg);
 int				ft_printf_lo(va_list list_arg);
 int				ft_printf_lu(va_list list_arg);
 int				ft_printf_xX(va_list list_arg, int maj);
+char			*ft_printf_bin_converter(unsigned int n);
 char			*ft_printf_octal_converter(unsigned int n);
 char			*ft_printf_hex_converter(unsigned int n);
 char			*ft_printf_octal_converter_long_int(unsigned long int n);
