@@ -6,13 +6,13 @@
 /*   By: cledant <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/22 12:38:57 by cledant           #+#    #+#             */
-/*   Updated: 2016/04/25 18:58:38 by cledant          ###   ########.fr       */
+/*   Updated: 2016/04/25 19:51:00 by cledant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static	size_t	ft_strlenitoi(long int n)
+static	size_t	ft_strlenitoi(long long int n)
 {
 	size_t	result;
 
@@ -30,7 +30,7 @@ static	size_t	ft_strlenitoi(long int n)
 	return (result);
 }
 
-static char		*ft_internal_itoa(long int n, size_t len, char *res)
+static char		*ft_internal_itoa(long long int n, size_t len, char *res)
 {
 	char *cpy_res;
 
@@ -53,16 +53,17 @@ static char		*ft_internal_itoa(long int n, size_t len, char *res)
 	return (cpy_res);
 }
 
-char			*ft_printf_itoa_long_int(long int n)
+char			*ft_printf_itoa_long_long_int(long long int n)
 {
 	size_t	len;
 	char	*result;
 
 	len = ft_strlenitoi(n);
-	if (n == LONG_MIN)
+	if (n == LLONG_MIN)
 	{
 		result = ft_strnew(20);
-		return (ft_strcpy(result, "-9223372036854775808"));
+		return (ft_strcpy(result,
+			"-9223372036854775808"));
 	}
 	result = ft_strnew(len);
 	if (result == NULL)
