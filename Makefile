@@ -6,7 +6,7 @@
 #    By: cledant <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/11/26 10:40:13 by cledant           #+#    #+#              #
-#    Updated: 2016/04/24 16:23:02 by cledant          ###   ########.fr        #
+#    Updated: 2016/04/25 12:17:57 by cledant          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,7 +27,7 @@ SRC_NAME =	ft_printf.c ft_printf_is_converter.c ft_printf_analyse_string.c \
 			ft_printf_xX.c ft_printf_hex_converter.c ft_strtoupper.c \
 			ft_printf_ld.c ft_printf_itoa_long_int.c \
 			ft_printf_lo.c ft_printf_octal_converter_long_int.c ft_printf_lu.c \
-			ft_printf_itoa_unsigned_long_int.c \
+			ft_printf_itoa_unsigned_long_int.c ft_wcharlen.c \
 			ft_printf_s.c ft_printf_c.c ft_wputstr.c ft_printf_ls.c \
 			ft_wstrlen.c ft_wputchar.c ft_printf_lc.c
 

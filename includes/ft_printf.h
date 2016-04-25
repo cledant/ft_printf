@@ -6,7 +6,7 @@
 /*   By: cledant <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/19 10:55:21 by cledant           #+#    #+#             */
-/*   Updated: 2016/04/24 16:26:32 by cledant          ###   ########.fr       */
+/*   Updated: 2016/04/25 13:54:23 by cledant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,5 +69,6 @@ void			ft_strtoupper(char *s);
 void			ft_wputchar(wchar_t c);
 void			ft_wputstr(wchar_t *s);
 size_t			ft_wstrlen(wchar_t *s);
+size_t			ft_wcharlen(wchar_t c);
 
 #endif
