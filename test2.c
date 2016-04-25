@@ -6,7 +6,7 @@
 /*   By: cledant <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/19 11:33:20 by cledant           #+#    #+#             */
-/*   Updated: 2016/04/20 16:25:03 by cledant          ###   ########.fr       */
+/*   Updated: 2016/04/25 16:31:31 by cledant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 int		main(void)
 {
-	printf("coucou toussa%v");
+	printf("coucou toussa %lS", "coucou");
 }
