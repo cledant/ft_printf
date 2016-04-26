@@ -6,7 +6,7 @@
 /*   By: cledant <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/19 10:55:21 by cledant           #+#    #+#             */
-/*   Updated: 2016/04/25 19:35:56 by cledant          ###   ########.fr       */
+/*   Updated: 2016/04/26 11:28:15 by cledant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,11 @@ int				ft_printf_lld(va_list list_arg);
 int				ft_printf_llo(va_list list_arg);
 int				ft_printf_llu(va_list list_arg);
 int				ft_printf_llxX(va_list list_arg, int maj);
+int				ft_printf_hd(va_list list_arg);
+int				ft_printf_hD(va_list list_arg);
+int				ft_printf_ho(va_list list_arg);
+int				ft_printf_hu(va_list list_arg);
+int				ft_printf_hxX(va_list list_arg, int maj);
 char			*ft_printf_octal_converter(unsigned int n);
 char			*ft_printf_hex_converter(unsigned int n);
 char			*ft_printf_octal_converter_long_int(unsigned long int n);
@@ -68,6 +73,8 @@ char			*ft_printf_octal_converter_long_long_int(unsigned \
 					long long int n);
 char			*ft_printf_hex_converter_long_long_int(unsigned \
 					long long int n);
+char			*ft_printf_itoa_short_int(short int n);
+char			*ft_printf_itoa_unsigned_short_int(short int n);
 char			*ft_printf_itoa_unsigned(unsigned int n);
 char			*ft_printf_itoa_long_int(long int n);
 char			*ft_printf_itoa_unsigned_long_int(unsigned long int n);

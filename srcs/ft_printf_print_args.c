@@ -6,7 +6,7 @@
 /*   By: cledant <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/20 19:21:49 by cledant           #+#    #+#             */
-/*   Updated: 2016/04/25 19:28:30 by cledant          ###   ########.fr       */
+/*   Updated: 2016/04/26 11:26:57 by cledant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,17 +102,44 @@ static int		ft_length_0(t_flags *flag, va_list list_arg)
 	return (len);
 }
 
+static int		ft_length_minus_1(t_flags *flag, va_list list_arg)
+{
+	int		len;
+
+	len = 0;
+	if (flag->type == 3)
+		len = ft_printf_hd(list_arg);
+	else if (flag->type == 4)
+		len = ft_printf_hD(list_arg);
+	else if (flag->type == 5)
+		len = ft_printf_hd(list_arg);
+	else if (flag->type == 6)
+		len = ft_printf_ho(list_arg);
+	else if (flag->type == 7)
+		len = ft_printf_ho(list_arg);
+	else if (flag->type == 8)
+		len = ft_printf_hu(list_arg);
+	else if (flag->type == 9)
+		len = ft_printf_hu(list_arg);
+	else if (flag->type == 10)
+		len = ft_printf_hxX(list_arg, 0);
+	else if (flag->type == 11)
+		len = ft_printf_hxX(list_arg, 1);
+	return (len);
+}
+
 int				ft_printf_print_args(t_flags *flag, va_list list_arg)
 {
 	int		len;
 
 	len = 0;
-//	ft_putnbrendl_fd(flag->length, 2);
 	if (flag->length == 0)
 		len = ft_length_0(flag, list_arg);
 	else if (flag->length == 1)
 		len = ft_length_1(flag, list_arg);
 	else if (flag->length == 2)
 		len = ft_length_2(flag, list_arg);
+	else if (flag->length == -1)
+		len = ft_length_minus_1(flag, list_arg);
 	return (len);
 }
