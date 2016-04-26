@@ -6,7 +6,7 @@
 /*   By: cledant <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/19 10:55:21 by cledant           #+#    #+#             */
-/*   Updated: 2016/04/26 11:28:15 by cledant          ###   ########.fr       */
+/*   Updated: 2016/04/26 15:59:40 by cledant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,7 @@ int				ft_printf_s(va_list list_arg);
 int				ft_printf_c(va_list list_arg);
 int				ft_printf_d(va_list list_arg);
 int				ft_printf_u(va_list list_arg);
+int				ft_printf_p(va_list list_arg);
 int				ft_printf_o(va_list list_arg);
 int				ft_printf_xX(va_list list_arg, int maj);
 int				ft_printf_ls(va_list list_arg);
@@ -65,6 +66,10 @@ int				ft_printf_hD(va_list list_arg);
 int				ft_printf_ho(va_list list_arg);
 int				ft_printf_hu(va_list list_arg);
 int				ft_printf_hxX(va_list list_arg, int maj);
+int				ft_printf_hhd(va_list list_arg);
+int				ft_printf_hho(va_list list_arg);
+int				ft_printf_hhu(va_list list_arg);
+int				ft_printf_hhxX(va_list list_arg, int maj);
 char			*ft_printf_octal_converter(unsigned int n);
 char			*ft_printf_hex_converter(unsigned int n);
 char			*ft_printf_octal_converter_long_int(unsigned long int n);

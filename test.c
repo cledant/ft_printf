@@ -6,7 +6,7 @@
 /*   By: cledant <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/19 11:33:20 by cledant           #+#    #+#             */
-/*   Updated: 2016/04/26 11:26:30 by cledant          ###   ########.fr       */
+/*   Updated: 2016/04/26 15:57:09 by cledant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,6 @@ int		main(void)
 //	ft_printf("coucou test %d\n", 8);
 //	printf("%hhu / %hhu", SHRT_MAX - 42, SHRT_MAX - 4200);
 //	ft_printf("%hhu / %hhu", SHRT_MAX - 42, SHRT_MAX - 4200);
-	ft_printf("coucou test %D\n", LONG_MAX + 1);
-	printf("coucou test %D\n", LONG_MAX + 1);
+	ft_printf("coucou test %lp\n", "a");
+	printf("coucou test %lp\n", "a");
 }
