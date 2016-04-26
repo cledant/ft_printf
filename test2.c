@@ -6,13 +6,14 @@
 /*   By: cledant <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/19 11:33:20 by cledant           #+#    #+#             */
-/*   Updated: 2016/04/26 10:27:12 by cledant          ###   ########.fr       */
+/*   Updated: 2016/04/26 17:43:41 by cledant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
+#include <limits.h>
 
 int		main(void)
 {
-	printf("coucou toussa %hD", (short)-12);
+	printf("coucou toussa %jd", LONG_MAX);
 }
