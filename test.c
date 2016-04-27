@@ -6,11 +6,11 @@
 /*   By: cledant <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/19 11:33:20 by cledant           #+#    #+#             */
-/*   Updated: 2016/04/27 11:52:12 by cledant          ###   ########.fr       */
+/*   Updated: 2016/04/27 16:43:17 by cledant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include "libft.h"
+#include "libft.h"
 #include <stdio.h>
 #include <limits.h>
 
@@ -26,5 +26,11 @@ int		main(void)
 //	ft_printf("coucou test%#012o\n", 9);
 //	printf("coucou test%#012o\n", 9);
 //	printf("ull : %#o", 0);
-	printf("aa%bb%bb", 42);
+//	printf("aa%bb%bb", 42);
+//	ft_printf("test%%d\n");
+//	printf("test%%d\n");
+//	ft_printf("test%md\n");
+//	printf("test%md\n");
+	ft_printf("{% %d}\n", 12);
+	printf("{% %d}\n", 12);
 }

@@ -6,7 +6,7 @@
 /*   By: cledant <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/19 11:30:42 by cledant           #+#    #+#             */
-/*   Updated: 2016/04/27 11:57:34 by cledant          ###   ########.fr       */
+/*   Updated: 2016/04/27 16:46:12 by cledant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,15 +31,30 @@ int		ft_printf(const char* restrict format, ...)
 		skip = 0;
 		if (ft_strncmp(cpy_format, "%", 1) == 0)
 		{
-			if ((ret_parse = ft_printf_parse_type(cpy_format,
-							list_arg, &skip, &read_char)) == 0)
+			ret_parse = ft_printf_parse_type(cpy_format, list_arg,
+					&skip, &read_char);
+			if (skip == 1)
 			{
 				cpy_format++;
-				while(ft_isspace(*cpy_format) == 1)
-					cpy_format++;
 				ft_putchar(*cpy_format);
 				cpy_format++;
 				read_char++;
+				ret_parse = -1;
+			}
+			if (ret_parse == 0)
+			{	
+				if(*(cpy_format + 1) != '\0' &&
+						ft_isspace(*(cpy_format + 1)) == 1)
+				{
+					cpy_format++;
+					while(ft_isspace(*cpy_format) == 1)
+						cpy_format++;
+					ft_putchar(*cpy_format);
+					cpy_format++;
+					read_char++;
+				}
+				else
+					cpy_format++;
 			}
 			else
 				cpy_format += ret_parse + 1;
@@ -50,8 +65,6 @@ int		ft_printf(const char* restrict format, ...)
 			cpy_format++;
 			read_char++;
 		}
-		if (skip == 1)
-			cpy_format++;
 		ret_parse = 0;
 	}
 	ft_putchar('\0');
