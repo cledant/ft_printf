@@ -6,7 +6,7 @@
 #    By: cledant <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/11/26 10:40:13 by cledant           #+#    #+#              #
-#    Updated: 2016/04/26 19:55:04 by cledant          ###   ########.fr        #
+#    Updated: 2016/04/27 10:22:59 by cledant          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,8 +36,8 @@ SRC_NAME =	ft_printf.c ft_printf_is_converter.c ft_printf_analyse_string.c \
 			ft_printf_itoa_long_long_int.c ft_printf_itoa_unsigned_long_long_int.c \
 			ft_printf_hd.c ft_printf_ho.c ft_printf_hu.c ft_printf_hxX.c \
 			ft_printf_hD.c ft_printf_hhd.c ft_printf_hho.c ft_printf_hhu.c \
-			ft_printf_hhxX.c ft_printf_p.c ft_printf_add_front_char.c \
-			ft_printf_chain_modifier.c
+			ft_printf_hhxX.c ft_printf_p.c ft_printf_add_front_string.c \
+			ft_printf_chain_modifier.c ft_printf_chain_modifier_ull.c
 
 SRC_PATH = ./srcs/
 
