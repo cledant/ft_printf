@@ -6,7 +6,7 @@
 /*   By: cledant <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/19 11:30:42 by cledant           #+#    #+#             */
-/*   Updated: 2016/04/22 16:01:56 by cledant          ###   ########.fr       */
+/*   Updated: 2016/04/27 11:57:34 by cledant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,9 @@ int		ft_printf(const char* restrict format, ...)
 			if ((ret_parse = ft_printf_parse_type(cpy_format,
 							list_arg, &skip, &read_char)) == 0)
 			{
+				cpy_format++;
+				while(ft_isspace(*cpy_format) == 1)
+					cpy_format++;
 				ft_putchar(*cpy_format);
 				cpy_format++;
 				read_char++;

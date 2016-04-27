@@ -6,7 +6,7 @@
 /*   By: cledant <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/19 11:33:20 by cledant           #+#    #+#             */
-/*   Updated: 2016/04/27 10:28:47 by cledant          ###   ########.fr       */
+/*   Updated: 2016/04/27 11:52:12 by cledant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,6 @@ int		main(void)
 //	printf("coucou test%+ 012d\n", 0);
 //	ft_printf("coucou test%#012o\n", 9);
 //	printf("coucou test%#012o\n", 9);
-	printf("ull : %#o", 0);
+//	printf("ull : %#o", 0);
+	printf("aa%bb%bb", 42);
 }
