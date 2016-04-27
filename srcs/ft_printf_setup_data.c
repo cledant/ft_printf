@@ -6,7 +6,7 @@
 /*   By: cledant <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/20 18:29:24 by cledant           #+#    #+#             */
-/*   Updated: 2016/04/20 20:02:23 by cledant          ###   ########.fr       */
+/*   Updated: 2016/04/27 18:26:08 by cledant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,10 @@ void		ft_printf_setup_data(char *data, t_flags *flag)
 			cpy_data++;
 	}
 	if (*cpy_data != '\0' && ft_strncmp(cpy_data, ".", 1) == 0)
+	{
 		flag->precision = 1;
+		cpy_data++;
+	}
 	if (*cpy_data != '\0' && ft_isdigit(*cpy_data) == 1)
 	{
 		flag->preci_size = ft_atoi(cpy_data);
