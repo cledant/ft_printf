@@ -1,34 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf_u.c                                      :+:      :+:    :+:   */
+/*   ft_printf_mod_precision.c                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cledant <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/04/20 19:39:30 by cledant           #+#    #+#             */
-/*   Updated: 2016/04/28 11:39:29 by cledant          ###   ########.fr       */
+/*   Created: 2016/04/27 18:51:39 by cledant           #+#    #+#             */
+/*   Updated: 2016/04/28 10:56:06 by cledant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int		ft_printf_u(va_list list_arg, t_flags *flag)
+char	*ft_printf_mod_size(char *s, size_t size_len)
 {
-	int					val;
-	unsigned int		disp_val;
-	int					len;
-	char				*s_val;
+	size_t	s_len;
+	char	*new;
+	char	*cpy_new;
+	size_t	i;
 
-	val = va_arg(list_arg, int);
-	if (val < 0)
-		disp_val = (unsigned int)val;
-	else
-		disp_val = val;
-	if ((s_val = ft_printf_itoa_unsigned(disp_val)) == NULL)
-		return (0);
-	s_val = ft_printf_chain_modifier_ull(s_val, disp_val, flag);
-	ft_putstr(s_val);
-	len = ft_strlen(s_val);
-	ft_strdel(&s_val);
-	return len;
+	if ((s_len = ft_strlen(s)) >= size_len)
+		return (s);
+	i = 0;
+	if ((new = ft_strnew(size_len)) == NULL)
+		return (NULL);
+	cpy_new = new;
+	while (i < (size_len - s_len))
+	{
+		*new = ' ';
+		new++;
+		i++;
+	}
+	ft_strcpy(new, s);
+	ft_strdel(&s);
+	return (cpy_new);
 }

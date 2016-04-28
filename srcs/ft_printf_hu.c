@@ -6,13 +6,13 @@
 /*   By: cledant <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/26 10:02:36 by cledant           #+#    #+#             */
-/*   Updated: 2016/04/26 10:12:31 by cledant          ###   ########.fr       */
+/*   Updated: 2016/04/28 11:38:21 by cledant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int		ft_printf_hu(va_list list_arg)
+int		ft_printf_hu(va_list list_arg, t_flags *flag)
 {
 	int					val;
 	unsigned short int	disp_val;
@@ -26,6 +26,7 @@ int		ft_printf_hu(va_list list_arg)
 		disp_val = (unsigned short int)val;
 	if ((s_val = ft_printf_itoa_unsigned(disp_val)) == NULL)
 		return (0);
+	s_val = ft_printf_chain_modifier_ull(s_val, disp_val, flag);
 	ft_putstr(s_val);
 	len = ft_strlen(s_val);
 	ft_strdel(&s_val);
