@@ -1,34 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf_lc.c                                     :+:      :+:    :+:   */
+/*   ft_printf_chain_modifier_w.c                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cledant <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/04/28 18:22:47 by cledant           #+#    #+#             */
-/*   Updated: 2016/04/28 18:33:28 by cledant          ###   ########.fr       */
+/*   Created: 2016/04/28 17:21:42 by cledant           #+#    #+#             */
+/*   Updated: 2016/04/28 18:38:00 by cledant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int		ft_printf_lc(va_list list_arg, t_flags *flags)
+wchar_t	*ft_printf_chain_modifier_w(wchar_t *s, long long int val, t_flags *f)
 {
-	int			val;
-	wchar_t		*str;
-	size_t		len;
-
-	if ((val = va_arg(list_arg, wchar_t)) == 0)
-	{
-		ft_putchar(val);
-		return (1);
-	}
-	if ((str = ft_wstrnew(1)) == NULL)
-		return (0);
-	*str = val;
-	str = ft_printf_chain_modifier_w(str, 0, flags);
-	len = ft_wstrlen(str);
-	ft_wputstr(str);
-	free(str);
-	return (len);
+	if (f->precision == 1 && (f->type == 13 || f->type == 1))
+		s = ft_printf_mod_precision_str_w(s, f->preci_size);
+	if (f->pad_zero == 0 && f->pad_space == 0 && (f->type == 13 ||
+			f->type == 1))
+		s = ft_printf_mod_size_w(s, f->pad_size);
+	val++;
+	return (s);
 }

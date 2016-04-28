@@ -1,34 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf_lc.c                                     :+:      :+:    :+:   */
+/*   ft_printf_mod_size.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cledant <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/04/28 18:22:47 by cledant           #+#    #+#             */
-/*   Updated: 2016/04/28 18:33:28 by cledant          ###   ########.fr       */
+/*   Created: 2016/04/28 16:26:33 by cledant           #+#    #+#             */
+/*   Updated: 2016/04/28 18:42:31 by cledant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int		ft_printf_lc(va_list list_arg, t_flags *flags)
+wchar_t		*ft_printf_mod_size_w(wchar_t *s, size_t size_len)
 {
-	int			val;
-	wchar_t		*str;
-	size_t		len;
+	size_t		s_len;
+	wchar_t		*new;
+	wchar_t		*cpy_new;
+	size_t		i;
 
-	if ((val = va_arg(list_arg, wchar_t)) == 0)
+	if ((s_len = ft_wlen_strlen(s)) >= size_len)
+		return (s);
+	i = 0;
+	if ((new = ft_wstrnew(size_len)) == NULL)
+		return (NULL);
+	cpy_new = new;
+	while (i < (size_len - s_len))
 	{
-		ft_putchar(val);
-		return (1);
+		*new = ' ';
+		new++;
+		i++;
 	}
-	if ((str = ft_wstrnew(1)) == NULL)
-		return (0);
-	*str = val;
-	str = ft_printf_chain_modifier_w(str, 0, flags);
-	len = ft_wstrlen(str);
-	ft_wputstr(str);
-	free(str);
-	return (len);
+	ft_wstrcpy(new, s);
+	free(&s);
+	return (cpy_new);
 }

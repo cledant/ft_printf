@@ -1,34 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf_lc.c                                     :+:      :+:    :+:   */
+/*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cledant <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/04/28 18:22:47 by cledant           #+#    #+#             */
-/*   Updated: 2016/04/28 18:33:28 by cledant          ###   ########.fr       */
+/*   Created: 2015/11/23 12:47:07 by cledant           #+#    #+#             */
+/*   Updated: 2016/04/28 17:58:01 by cledant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int		ft_printf_lc(va_list list_arg, t_flags *flags)
+wchar_t		*ft_wstrcpy(wchar_t *dst, wchar_t *src)
 {
-	int			val;
-	wchar_t		*str;
-	size_t		len;
+	wchar_t *cpy_dst;
 
-	if ((val = va_arg(list_arg, wchar_t)) == 0)
+	cpy_dst = dst;
+	while (*src != '\0')
 	{
-		ft_putchar(val);
-		return (1);
+		*dst = *src;
+		src++;
+		dst++;
 	}
-	if ((str = ft_wstrnew(1)) == NULL)
-		return (0);
-	*str = val;
-	str = ft_printf_chain_modifier_w(str, 0, flags);
-	len = ft_wstrlen(str);
-	ft_wputstr(str);
-	free(str);
-	return (len);
+	*dst = '\0';
+	return (cpy_dst);
 }

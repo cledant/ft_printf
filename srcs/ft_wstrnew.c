@@ -1,34 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf_lc.c                                     :+:      :+:    :+:   */
+/*   ft_wstrnew.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cledant <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/04/28 18:22:47 by cledant           #+#    #+#             */
-/*   Updated: 2016/04/28 18:33:28 by cledant          ###   ########.fr       */
+/*   Created: 2016/04/28 13:52:10 by cledant           #+#    #+#             */
+/*   Updated: 2016/04/28 18:34:17 by cledant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
-int		ft_printf_lc(va_list list_arg, t_flags *flags)
+wchar_t		*ft_wstrnew(size_t size)
 {
-	int			val;
-	wchar_t		*str;
-	size_t		len;
+	wchar_t		*loc;
 
-	if ((val = va_arg(list_arg, wchar_t)) == 0)
-	{
-		ft_putchar(val);
-		return (1);
-	}
-	if ((str = ft_wstrnew(1)) == NULL)
-		return (0);
-	*str = val;
-	str = ft_printf_chain_modifier_w(str, 0, flags);
-	len = ft_wstrlen(str);
-	ft_wputstr(str);
-	free(str);
-	return (len);
+	loc = (wchar_t *)malloc((size + 1) * sizeof(wchar_t));
+	if (loc != NULL)
+		ft_bzero(loc, (size + 1) * sizeof(wchar_t));
+	return (loc);
 }

@@ -6,7 +6,7 @@
 /*   By: cledant <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/19 10:55:21 by cledant           #+#    #+#             */
-/*   Updated: 2016/04/28 12:11:12 by cledant          ###   ########.fr       */
+/*   Updated: 2016/04/28 18:37:21 by cledant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,15 +44,15 @@ int				ft_printf_is_flag(char *format);
 void			ft_printf_fill_flag(char *format, t_flags *data);
 void			ft_printf_fill_converter(char *format, t_flags *data);
 void			ft_printf_fill_modifier(char *format, t_flags *data);
-int				ft_printf_s(va_list list_arg);
-int				ft_printf_c(va_list list_arg);
+int				ft_printf_s(va_list list_arg, t_flags *flag);
+int				ft_printf_c(va_list list_arg, t_flags *flag);
 int				ft_printf_d(va_list list_arg, t_flags *flag);
 int				ft_printf_u(va_list list_arg, t_flags *flag);
 int				ft_printf_p(va_list list_arg);
 int				ft_printf_o(va_list list_arg, t_flags *flag);
 int				ft_printf_xX(va_list list_arg, int maj, t_flags *flag);
-int				ft_printf_ls(va_list list_arg);
-int				ft_printf_lc(va_list list_arg);
+int				ft_printf_ls(va_list list_arg, t_flags *flag);
+int				ft_printf_lc(va_list list_arg, t_flags *flag);
 int				ft_printf_ld(va_list list_arg, t_flags *flag);
 int				ft_printf_lo(va_list list_arg, t_flags *flag);
 int				ft_printf_lu(va_list list_arg, t_flags *flag);
@@ -87,16 +87,26 @@ char			*ft_printf_itoa_long_long_int(long long int n);
 char			*ft_printf_itoa_unsigned_long_long_int(unsigned long int n);
 char			*ft_printf_chain_modifier(char *s, long long int val,
 					t_flags *f);
+wchar_t			*ft_printf_chain_modifier_w(wchar_t *s, long long int val,
+					t_flags *f);
 char			*ft_printf_chain_modifier_ull(char *s,
 					unsigned long long int val, t_flags *f);
 char			*ft_printf_add_front_string(char *s, char *s2);
 char			*ft_printf_mod_precision(char *s, size_t pre_len);
 char			*ft_printf_mod_size(char *s, size_t size_len);
 char			*ft_printf_mod_rm_preci(char *s);
+char			*ft_printf_mod_precision_str_simple(char *s, size_t pre_size);
+wchar_t			*ft_printf_mod_precision_str_w(wchar_t *s, size_t pre_size);
+char			*ft_printf_mod_size(char *s, size_t pre_size);
+wchar_t			*ft_printf_mod_size_w(wchar_t *s, size_t pre_size);
 void			ft_strtoupper(char *s);
 void			ft_wputchar(wchar_t c);
 void			ft_wputstr(wchar_t *s);
+wchar_t			*ft_wstrnew(size_t size);
 size_t			ft_wstrlen(wchar_t *s);
 size_t			ft_wcharlen(wchar_t c);
+wchar_t			*ft_wstrdup(wchar_t *s1);
+wchar_t			*ft_wstrcpy(wchar_t *dst, wchar_t *src);
+size_t			ft_wlen_strlen(wchar_t *s);
 
 #endif
