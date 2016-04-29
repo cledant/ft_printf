@@ -6,7 +6,7 @@
 /*   By: cledant <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/28 17:21:42 by cledant           #+#    #+#             */
-/*   Updated: 2016/04/28 18:38:00 by cledant          ###   ########.fr       */
+/*   Updated: 2016/04/29 18:44:24 by cledant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,9 @@ wchar_t	*ft_printf_chain_modifier_w(wchar_t *s, long long int val, t_flags *f)
 	if (f->pad_zero == 0 && f->pad_space == 0 && (f->type == 13 ||
 			f->type == 1))
 		s = ft_printf_mod_size_w(s, f->pad_size);
+	if (f->pad_zero == 1 && f->pad_space == 0 && (f->type == 13 ||
+			f->type == 1))
+		s = ft_printf_mod_size_zero_w(s, f->pad_size);
 	val++;
 	return (s);
 }

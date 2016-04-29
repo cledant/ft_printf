@@ -6,7 +6,7 @@
 /*   By: cledant <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/19 10:55:21 by cledant           #+#    #+#             */
-/*   Updated: 2016/04/29 15:00:18 by cledant          ###   ########.fr       */
+/*   Updated: 2016/04/29 18:51:46 by cledant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,7 +98,10 @@ char			*ft_printf_mod_rm_preci(char *s);
 char			*ft_printf_mod_precision_str_simple(char *s, size_t pre_size);
 wchar_t			*ft_printf_mod_precision_str_w(wchar_t *s, size_t pre_size);
 char			*ft_printf_mod_size(char *s, size_t pre_size);
+char			*ft_printf_mod_size_zero(char *s, size_t pre_size);
+char			*ft_printf_mod_size_zero_hex(char *s, size_t pre_size);
 wchar_t			*ft_printf_mod_size_w(wchar_t *s, size_t pre_size);
+wchar_t			*ft_printf_mod_size_zero_w(wchar_t *s, size_t pre_size);
 void			ft_strtoupper(char *s);
 void			ft_wputchar(wchar_t c);
 void			ft_wputstr(wchar_t *s);
