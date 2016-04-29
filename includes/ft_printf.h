@@ -6,7 +6,7 @@
 /*   By: cledant <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/19 10:55:21 by cledant           #+#    #+#             */
-/*   Updated: 2016/04/29 13:31:14 by cledant          ###   ########.fr       */
+/*   Updated: 2016/04/29 15:00:18 by cledant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ int				ft_printf_s(va_list list_arg, t_flags *flag);
 int				ft_printf_c(va_list list_arg, t_flags *flag);
 int				ft_printf_d(va_list list_arg, t_flags *flag);
 int				ft_printf_u(va_list list_arg, t_flags *flag);
-int				ft_printf_p(va_list list_arg);
+int				ft_printf_p(va_list list_arg, t_flags *flag);
 int				ft_printf_o(va_list list_arg, t_flags *flag);
 int				ft_printf_xX(va_list list_arg, int maj, t_flags *flag);
 int				ft_printf_ls(va_list list_arg, t_flags *flag);

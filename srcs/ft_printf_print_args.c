@@ -6,7 +6,7 @@
 /*   By: cledant <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/20 19:21:49 by cledant           #+#    #+#             */
-/*   Updated: 2016/04/28 18:30:41 by cledant          ###   ########.fr       */
+/*   Updated: 2016/04/29 15:00:21 by cledant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,7 +78,7 @@ static int		ft_length_0(t_flags *flag, va_list list_arg)
 	else if (flag->type == 1)
 		len = ft_printf_ls(list_arg, flag);
 	else if (flag->type == 2)
-		len = ft_printf_p(list_arg);
+		len = ft_printf_p(list_arg, flag);
 	else if (flag->type == 3)
 		len = ft_printf_d(list_arg, flag);
 	else if (flag->type == 4)

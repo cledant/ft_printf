@@ -6,13 +6,13 @@
 /*   By: cledant <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/22 09:26:17 by cledant           #+#    #+#             */
-/*   Updated: 2016/04/26 16:11:44 by cledant          ###   ########.fr       */
+/*   Updated: 2016/04/29 15:07:09 by cledant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int		ft_printf_p(va_list list_arg)
+int		ft_printf_p(va_list list_arg, t_flags *flag)
 {
 	long int			val;
 	unsigned long int	disp_val;
@@ -26,8 +26,8 @@ int		ft_printf_p(va_list list_arg)
 		disp_val = val;
 	if ((s_val = ft_printf_hex_converter_long_int(disp_val)) == NULL)
 		return (0);
-	len = ft_strlen(s_val) + 2;
-	ft_putstr("0x");
+	s_val = ft_printf_chain_modifier(s_val, disp_val, flag);
+	len = ft_strlen(s_val);
 	ft_putstr(s_val);
 	ft_strdel(&s_val);
 	return (len);
