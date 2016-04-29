@@ -6,7 +6,7 @@
 /*   By: cledant <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/19 10:55:21 by cledant           #+#    #+#             */
-/*   Updated: 2016/04/28 18:37:21 by cledant          ###   ########.fr       */
+/*   Updated: 2016/04/29 13:31:14 by cledant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -107,6 +107,8 @@ size_t			ft_wstrlen(wchar_t *s);
 size_t			ft_wcharlen(wchar_t c);
 wchar_t			*ft_wstrdup(wchar_t *s1);
 wchar_t			*ft_wstrcpy(wchar_t *dst, wchar_t *src);
+wchar_t			*ft_wlen_strcpy(wchar_t *dst, wchar_t *src, size_t wlen);
 size_t			ft_wlen_strlen(wchar_t *s);
+size_t			ft_wlen_strnlen(wchar_t *s, size_t wlen);
 
 #endif

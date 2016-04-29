@@ -6,7 +6,7 @@
 #    By: cledant <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/11/26 10:40:13 by cledant           #+#    #+#              #
-#    Updated: 2016/04/28 18:42:51 by cledant          ###   ########.fr        #
+#    Updated: 2016/04/29 13:34:46 by cledant          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,7 +40,8 @@ SRC_NAME =	ft_printf.c ft_printf_is_converter.c ft_printf_analyse_string.c \
 			ft_printf_chain_modifier.c ft_printf_chain_modifier_ull.c \
 			ft_printf_mod_precision.c ft_printf_mod_rm_preci.c ft_printf_mod_size.c\
 			ft_printf_mod_precision_str_simple.c ft_wstrdup.c ft_wstrcpy.c \
-			ft_wlen_strlen.c ft_wstrnew.c ft_printf_mod_size_w.c
+			ft_wlen_strnlen.c ft_wstrnew.c ft_printf_mod_size_w.c \
+			ft_wlen_strlen.c ft_wlen_strcpy.c
 
 SRC_PATH = ./srcs/
 
