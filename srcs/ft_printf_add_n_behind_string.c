@@ -1,45 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf_mod_size.c                               :+:      :+:    :+:   */
+/*   ft_printf_add_space.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cledant <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/04/28 16:26:33 by cledant           #+#    #+#             */
-/*   Updated: 2016/04/30 15:03:14 by cledant          ###   ########.fr       */
+/*   Created: 2016/04/26 19:13:09 by cledant           #+#    #+#             */
+/*   Updated: 2016/04/30 16:00:23 by cledant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-char	*ft_printf_mod_size_zero(char *s, size_t size_len)
+char		*ft_printf_add_n_behind_string(char *s, size_t p_len ,char c)
 {
-	size_t	s_len;
-	char	*new;
-	char	*cpy_s;
-	char	*cpy_new;
+	char	*ret;
+	char	*s2;
+	char	*cpy_s2;
 	size_t	i;
+	size_t	r_len;
 
-	if ((s_len = ft_strlen(s)) >= size_len)
-		return (s);
 	i = 0;
-	cpy_s = s;
-	if ((new = ft_strnew(size_len)) == NULL)
-		return (NULL);
-	cpy_new = new;
-	if (ft_isalnum(*s) == 0)
+	if (p_len <= ft_strlen(s))
+		return (s);
+	r_len = p_len - ft_strlen(s);
+	if ((s2 = ft_strnew(r_len)) == NULL)
+		return (s);
+	cpy_s2 = s2;
+	while (i < r_len)
 	{
-		*new = *s;
-		new++;
-		s++;
-	}
-	while (i < (size_len - s_len))
-	{
-		*new = '0';
-		new++;
+		*s2 = c;
+		s2++;
 		i++;
 	}
-	ft_strcpy(new, s);
-	ft_strdel(&cpy_s);
-	return (cpy_new);
+	if ((ret = ft_strjoin(s, cpy_s2)) == NULL)
+		return (s);
+	ft_strdel(&s);
+	ft_strdel(&cpy_s2);
+	return (ret);
 }
