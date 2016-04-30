@@ -6,7 +6,7 @@
 /*   By: cledant <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/19 10:55:21 by cledant           #+#    #+#             */
-/*   Updated: 2016/04/30 15:44:12 by cledant          ###   ########.fr       */
+/*   Updated: 2016/04/30 16:54:01 by cledant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -104,6 +104,7 @@ char			*ft_printf_mod_size_zero_hex(char *s, size_t pre_size);
 wchar_t			*ft_printf_mod_size_w(wchar_t *s, size_t pre_size);
 wchar_t			*ft_printf_mod_size_zero_w(wchar_t *s, size_t pre_size);
 void			ft_strtoupper(char *s);
+char			*ft_str_front_n_remove(char *s, size_t len);
 void			ft_wputchar(wchar_t c);
 void			ft_wputstr(wchar_t *s);
 wchar_t			*ft_wstrnew(size_t size);
