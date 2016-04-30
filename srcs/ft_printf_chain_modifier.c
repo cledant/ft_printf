@@ -6,7 +6,7 @@
 /*   By: cledant <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/26 19:59:04 by cledant           #+#    #+#             */
-/*   Updated: 2016/04/30 16:48:33 by cledant          ###   ########.fr       */
+/*   Updated: 2016/04/30 19:45:11 by cledant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ char	*ft_printf_chain_modifier(char *s, long long int val, t_flags *f)
 		s = ft_printf_mod_size_zero(s, f->pad_size);
 	if (f->pad_zero == 1 && f->pad_space == 0 && (f->type == 12 ||
 			f->type == 0))
-		s = ft_printf_mod_size_zero(s, f->pad_size);
+		s = ft_printf_mod_size_zero_string(s, f->pad_size);
 	if (f->pad_zero == 1 && f->pad_space == 0 && f->type == 2)
 		s = ft_printf_mod_size_zero_hex(s, f->pad_size);
 
@@ -53,8 +53,20 @@ char	*ft_printf_chain_modifier(char *s, long long int val, t_flags *f)
 		s = ft_printf_add_n_behind_string(s, f->pad_size, ' ');
 
 	if ((f->type == 6 || f->type == 7) && f->sharp > 0 && val > 0)
+	{
+		if (f->preci_size == 0)
+			s = ft_printf_mod_precision(s, 0);
+		else
+			s = ft_printf_mod_precision(s, f->preci_size - 1);
 		s = ft_printf_add_front_string("0", s);
+	}
 	else if ((f->type == 10 || f->type == 11) && f->sharp > 0 && val > 0)
+	{
+		s = ft_printf_mod_precision(s, f->preci_size);
 		s = ft_printf_add_front_string("0x", s);
+	}
+	else if ((f->type == 10 || f->type == 11) && f->sharp > 0 && val == 0 &&
+			f->precision == 1)
+		s = ft_printf_mod_rm_preci(s);
 	return (s);
 }
