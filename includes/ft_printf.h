@@ -6,7 +6,7 @@
 /*   By: cledant <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/19 10:55:21 by cledant           #+#    #+#             */
-/*   Updated: 2016/04/30 19:32:35 by cledant          ###   ########.fr       */
+/*   Updated: 2016/05/01 13:18:30 by cledant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,7 +92,7 @@ wchar_t			*ft_printf_chain_modifier_w(wchar_t *s, long long int val,
 char			*ft_printf_chain_modifier_ull(char *s,
 					unsigned long long int val, t_flags *f);
 char			*ft_printf_add_front_string(char *s, char *s2);
-char			*ft_printf_add_n_behind_string(char *s, size_t p_len ,char c);
+char			*ft_printf_add_n_behind_string(char *s, size_t p_len, char c);
 char			*ft_printf_mod_precision(char *s, size_t pre_len);
 char			*ft_printf_mod_size(char *s, size_t size_len);
 char			*ft_printf_mod_rm_preci(char *s);
