@@ -6,7 +6,7 @@
 /*   By: cledant <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/20 19:21:49 by cledant           #+#    #+#             */
-/*   Updated: 2016/05/01 17:42:00 by cledant          ###   ########.fr       */
+/*   Updated: 2016/05/01 19:06:53 by cledant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -136,7 +136,7 @@ static int		ft_length_minus_1(t_flags *flag, va_list list_arg)
 	else if (flag->type == 8)
 		len = ft_printf_hu(list_arg, flag);
 	else if (flag->type == 9)
-		len = ft_printf_hu(list_arg, flag);
+		len = ft_printf_lu(list_arg, flag);
 	else if (flag->type == 10)
 		len = ft_printf_hxX(list_arg, 0, flag);
 	else if (flag->type == 11)

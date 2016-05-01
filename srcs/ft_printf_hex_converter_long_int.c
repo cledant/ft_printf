@@ -6,7 +6,7 @@
 /*   By: cledant <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/22 10:14:16 by cledant           #+#    #+#             */
-/*   Updated: 2016/04/25 17:04:07 by cledant          ###   ########.fr       */
+/*   Updated: 2016/05/01 18:55:40 by cledant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ static size_t		ft_len_hex(unsigned long int n)
 
 static void			ft_conv_hex(unsigned long int n, char *ret, size_t len)
 {
-	unsigned int	cpy_n;
+	unsigned long int	cpy_n;
 
 	cpy_n = n;
 	while (cpy_n != 0)

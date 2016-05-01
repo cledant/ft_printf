@@ -6,7 +6,7 @@
 /*   By: cledant <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/28 17:31:15 by cledant           #+#    #+#             */
-/*   Updated: 2016/05/01 17:04:55 by cledant          ###   ########.fr       */
+/*   Updated: 2016/05/01 20:15:34 by cledant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,6 @@ int		ft_printf_ls(va_list list_arg, t_flags *flag)
 		free(m_val);
 		return (len);
 	}
-	if (*val == '\0')
-		return (0);
 	if ((m_val = ft_wstrdup(val)) == NULL)
 		return (0);
 	m_val = ft_printf_chain_modifier_w(m_val, 0, flag);

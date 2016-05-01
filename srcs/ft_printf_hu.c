@@ -6,7 +6,7 @@
 /*   By: cledant <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/26 10:02:36 by cledant           #+#    #+#             */
-/*   Updated: 2016/04/28 11:38:21 by cledant          ###   ########.fr       */
+/*   Updated: 2016/05/01 19:02:32 by cledant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int		ft_printf_hu(va_list list_arg, t_flags *flag)
 	if (val < 0)
 		disp_val = (unsigned short int)val;
 	else
-		disp_val = (unsigned short int)val;
+		disp_val = val;
 	if ((s_val = ft_printf_itoa_unsigned(disp_val)) == NULL)
 		return (0);
 	s_val = ft_printf_chain_modifier_ull(s_val, disp_val, flag);

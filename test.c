@@ -6,7 +6,7 @@
 /*   By: cledant <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/19 11:33:20 by cledant           #+#    #+#             */
-/*   Updated: 2016/05/01 17:20:00 by cledant          ###   ########.fr       */
+/*   Updated: 2016/05/01 20:12:10 by cledant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,12 +55,16 @@ int		main(void)
 //	printf("{% c}\n", 0);
 //	ft_printf("{%03.1d}\n", 0);
 //	printf("{%03.1d}\n", 0);
-	int test_val;
-
-	ft_printf("{%10R}\n", 0);
-	printf("{%10R}\n", 0);
-	ft_printf("{%10}\n", 0);
-	printf("{%10}\n", 0);
-	ft_printf("{%lp}\n", test_val);
-	printf("{%lp}\n", test_val);
+//	int test_val;
+//
+//	ft_printf("{%10R}\n", 0);
+//	printf("{%10R}\n", 0);
+//	ft_printf("{%10}\n", 0);
+//	printf("{%10}\n", 0);
+//	ft_printf("{%lp}\n", test_val);
+//	printf("{%lp}\n", test_val);
+//	ft_printf("{%lx}\n", 4294967297);
+//	printf("{%lx}\n", 4294967297);
+//	printf("%10s coucou\n", "");
+	ft_printf("%10s coucou\n", "");
 }

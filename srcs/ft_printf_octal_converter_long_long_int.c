@@ -6,7 +6,7 @@
 /*   By: cledant <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/25 19:08:34 by cledant           #+#    #+#             */
-/*   Updated: 2016/04/25 19:10:58 by cledant          ###   ########.fr       */
+/*   Updated: 2016/05/01 18:56:51 by cledant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ static size_t	ft_len_octal(unsigned long long int n)
 
 static void		ft_conv_octal(unsigned long long int n, char *ret, size_t len)
 {
-	unsigned long int	cpy_n;
+	unsigned long long int	cpy_n;
 
 	cpy_n = n;
 	while (cpy_n != 0)
