@@ -6,7 +6,7 @@
 /*   By: cledant <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/19 11:33:20 by cledant           #+#    #+#             */
-/*   Updated: 2016/05/01 13:59:27 by cledant          ###   ########.fr       */
+/*   Updated: 2016/05/01 14:48:09 by cledant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,10 +47,12 @@ int		main(void)
 //	printf("%.0d\n", 2);
 //	printf("%4.15d\n", -424242);
 //	ft_printf("%4.15d\n", -424242);
-	ft_printf("{%3c}\n", 0);
-	printf("{%3c}\n", 0);
-	ft_printf("{%3d}\n", 10);
-	printf("{%3d}\n", 10);
-	ft_printf("{% c}\n", 0);
-	printf("{% c}\n", 0);
+//	ft_printf("{%3c}\n", 0);
+//	printf("{%3c}\n", 0);
+//	ft_printf("{%3d}\n", 10);
+//	printf("{%3d}\n", 10);
+//	ft_printf("{% c}\n", 0);
+//	printf("{% c}\n", 0);
+	ft_printf("{%03.1d}\n", 0);
+	printf("{%03.1d}\n", 0);
 }

@@ -6,7 +6,7 @@
 /*   By: cledant <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/19 10:55:21 by cledant           #+#    #+#             */
-/*   Updated: 2016/05/01 13:18:30 by cledant          ###   ########.fr       */
+/*   Updated: 2016/05/01 16:07:59 by cledant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,6 +93,8 @@ char			*ft_printf_chain_modifier_ull(char *s,
 					unsigned long long int val, t_flags *f);
 char			*ft_printf_add_front_string(char *s, char *s2);
 char			*ft_printf_add_n_behind_string(char *s, size_t p_len, char c);
+wchar_t			*ft_printf_add_n_behind_w_string(wchar_t *s, size_t p_len,
+					char c);
 char			*ft_printf_mod_precision(char *s, size_t pre_len);
 char			*ft_printf_mod_size(char *s, size_t size_len);
 char			*ft_printf_mod_rm_preci(char *s);
@@ -112,6 +114,7 @@ wchar_t			*ft_wstrnew(size_t size);
 size_t			ft_wstrlen(wchar_t *s);
 size_t			ft_wcharlen(wchar_t c);
 wchar_t			*ft_wstrdup(wchar_t *s1);
+wchar_t			*ft_wstrjoin(wchar_t *s1, wchar_t *s2);
 wchar_t			*ft_wstrcpy(wchar_t *dst, wchar_t *src);
 wchar_t			*ft_wlen_strcpy(wchar_t *dst, wchar_t *src, size_t wlen);
 size_t			ft_wlen_strlen(wchar_t *s);
