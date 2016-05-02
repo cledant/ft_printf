@@ -6,7 +6,7 @@
 /*   By: cledant <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/20 19:16:12 by cledant           #+#    #+#             */
-/*   Updated: 2016/04/21 09:46:26 by cledant          ###   ########.fr       */
+/*   Updated: 2016/05/02 17:27:34 by cledant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,4 +42,9 @@ void	ft_printf_fill_converter(char *format, t_flags *data)
 		data->type = 12;
 	else if (ft_strncmp(format, "C", 1) == 0)
 		data->type = 13;
+	else
+	{
+		data->type = 100;
+		data->other_char = *format;
+	}
 }

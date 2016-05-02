@@ -6,7 +6,7 @@
 /*   By: cledant <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/20 16:59:21 by cledant           #+#    #+#             */
-/*   Updated: 2016/04/27 14:47:52 by cledant          ###   ########.fr       */
+/*   Updated: 2016/05/02 17:22:04 by cledant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,4 +25,5 @@ void	ft_printf_init_data(t_flags *data)
 	data->double_pc = 0;
 	data->length = 0;
 	data->type = -1;
+	data->other_char = 0;
 }

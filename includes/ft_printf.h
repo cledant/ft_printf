@@ -6,7 +6,7 @@
 /*   By: cledant <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/19 10:55:21 by cledant           #+#    #+#             */
-/*   Updated: 2016/05/02 14:15:01 by cledant          ###   ########.fr       */
+/*   Updated: 2016/05/02 17:26:00 by cledant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ typedef struct	flags
 	int			double_pc;
 	int			length;
 	size_t		type;
+	char		other_char;
 }				t_flags;
 
 char			*ft_printf_analyse_string(char *format);
@@ -50,6 +51,7 @@ int				ft_printf_d(va_list list_arg, t_flags *flag);
 int				ft_printf_u(va_list list_arg, t_flags *flag);
 int				ft_printf_p(va_list list_arg, t_flags *flag);
 int				ft_printf_o(va_list list_arg, t_flags *flag);
+int				ft_printf_other(t_flags *flag);
 int				ft_printf_xX(va_list list_arg, int maj, t_flags *flag);
 int				ft_printf_ls(va_list list_arg, t_flags *flag);
 int				ft_printf_lc(va_list list_arg, t_flags *flag);

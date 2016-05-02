@@ -6,7 +6,7 @@
 /*   By: cledant <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/20 18:29:24 by cledant           #+#    #+#             */
-/*   Updated: 2016/04/28 11:07:45 by cledant          ###   ########.fr       */
+/*   Updated: 2016/05/02 17:06:01 by cledant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,6 @@ void		ft_printf_setup_data(char *data, t_flags *flag)
 		ft_printf_fill_modifier(cpy_data, flag);
 		cpy_data++;
 	}
-	if (*cpy_data != '\0' && ft_printf_is_converter(cpy_data) == 1)
+	if (*cpy_data != '\0')
 		ft_printf_fill_converter(cpy_data, flag);
 }
