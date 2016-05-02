@@ -6,7 +6,7 @@
 /*   By: cledant <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/26 19:59:04 by cledant           #+#    #+#             */
-/*   Updated: 2016/05/02 14:13:12 by cledant          ###   ########.fr       */
+/*   Updated: 2016/05/02 15:54:44 by cledant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ char	*ft_printf_chain_modifier(char *s, long long int val, t_flags *f)
 	if (f->precision == 1 && f->sharp == 0 && (f->type >= 2 && f->type <= 11))
 		s = ft_printf_mod_precision(s, f->preci_size);
 	if (f->precision == 1 && f->preci_size == 0 && (f->type >= 2
-			&& f->type <= 11) && f->sharp == 0)
+			&& f->type <= 11) && f->sharp == 0 && val == 0)
 		s = ft_printf_mod_rm_preci(s);
 	if (f->type == 2 && f->sharp == 0)
 		s = ft_printf_add_front_string("0x", s);
