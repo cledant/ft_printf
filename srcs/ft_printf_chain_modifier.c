@@ -6,7 +6,7 @@
 /*   By: cledant <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/26 19:59:04 by cledant           #+#    #+#             */
-/*   Updated: 2016/05/02 12:34:52 by cledant          ###   ########.fr       */
+/*   Updated: 2016/05/02 14:13:12 by cledant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,8 @@ static void		ft_printf_set_flag_zero_sc(t_flags *f)
 
 char	*ft_printf_chain_modifier(char *s, long long int val, t_flags *f)
 {
-	if (f->pad_zero == 1 && f->precision == 1 && f->type != 0 && f->type != 12)
+	if (f->pad_zero == 1 && f->precision == 1 && f->type != 0 && f->type != 12
+			&& val >= 0)
 		f->pad_zero = 0;
 
 	if (f->type == 0 && ft_strcmp(s, "") == 1)
