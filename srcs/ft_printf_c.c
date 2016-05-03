@@ -6,7 +6,7 @@
 /*   By: cledant <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/22 15:07:47 by cledant           #+#    #+#             */
-/*   Updated: 2016/05/01 20:02:43 by cledant          ###   ########.fr       */
+/*   Updated: 2016/05/03 13:21:48 by cledant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,10 @@ int		ft_printf_c(va_list list_arg, t_flags *flags)
 	char	*str;
 	size_t	len;
 
+	if ((str = ft_strnew(1)) == NULL)
+		return (0);
 	if ((val = va_arg(list_arg, int)) == 0)
 	{
-		if ((str = ft_strnew(1)) == NULL)
-			return (0);
 		*str = val;
 		if (flags->pad_size > 0)
 			flags->pad_size--;
@@ -32,8 +32,6 @@ int		ft_printf_c(va_list list_arg, t_flags *flags)
 		ft_strdel(&str);
 		return (1 + len);
 	}
-	if ((str = ft_strnew(1)) == NULL)
-		return (0);
 	*str = val;
 	str = ft_printf_chain_modifier(str, 0, flags);
 	len = ft_strlen(str);

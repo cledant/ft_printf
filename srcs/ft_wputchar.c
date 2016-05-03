@@ -6,7 +6,7 @@
 /*   By: cledant <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/24 20:03:42 by cledant           #+#    #+#             */
-/*   Updated: 2016/04/25 15:44:28 by cledant          ###   ########.fr       */
+/*   Updated: 2016/05/03 16:33:04 by cledant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,7 +88,7 @@ static void	ft_size_3(wchar_t c)
 	part[1] = tab[1] & (unsigned int)c;
 	part[1] = part[1] << 2;
 	part[2] = tab[2] & (unsigned int)c;
-	part[2] = part[2] << 4 ;
+	part[2] = part[2] << 4;
 	part[0] = tab[3] | part[0];
 	part[1] = tab[4] | part[1];
 	part[1] = part[1] >> 8;

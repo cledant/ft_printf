@@ -6,7 +6,7 @@
 /*   By: cledant <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/22 09:33:40 by cledant           #+#    #+#             */
-/*   Updated: 2016/04/22 10:04:35 by cledant          ###   ########.fr       */
+/*   Updated: 2016/05/03 16:36:32 by cledant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,6 @@ char				*ft_printf_octal_converter(unsigned int n)
 	}
 	if ((ret = ft_strnew(len)) == NULL)
 		return (NULL);
-	ft_conv_octal(n , ret, len);
+	ft_conv_octal(n, ret, len);
 	return (ret);
 }

@@ -6,13 +6,13 @@
 /*   By: cledant <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/26 19:13:09 by cledant           #+#    #+#             */
-/*   Updated: 2016/04/30 16:00:23 by cledant          ###   ########.fr       */
+/*   Updated: 2016/05/03 13:08:19 by cledant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-char		*ft_printf_add_n_behind_string(char *s, size_t p_len ,char c)
+char		*ft_printf_add_n_behind_string(char *s, size_t p_len, char c)
 {
 	char	*ret;
 	char	*s2;

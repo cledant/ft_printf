@@ -6,7 +6,7 @@
 /*   By: cledant <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/22 10:14:16 by cledant           #+#    #+#             */
-/*   Updated: 2016/04/22 10:24:53 by cledant          ###   ########.fr       */
+/*   Updated: 2016/05/03 17:15:09 by cledant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,6 +58,6 @@ char				*ft_printf_hex_converter(unsigned int n)
 	}
 	if ((ret = ft_strnew(len)) == NULL)
 		return (NULL);
-	ft_conv_hex(n , ret, len);
+	ft_conv_hex(n, ret, len);
 	return (ret);
 }

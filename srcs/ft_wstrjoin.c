@@ -6,7 +6,7 @@
 /*   By: cledant <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/01 16:04:32 by cledant           #+#    #+#             */
-/*   Updated: 2016/05/01 16:05:54 by cledant          ###   ########.fr       */
+/*   Updated: 2016/05/03 16:32:18 by cledant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ wchar_t		*ft_wstrjoin(wchar_t *s1, wchar_t *s2)
 
 	len = ft_wstrlen(s1);
 	len = len + ft_wstrlen(s2);
-	if((result = ft_wstrnew(len)) == NULL)
+	if ((result = ft_wstrnew(len)) == NULL)
 		return (NULL);
 	cpy_result = result;
 	while (*s1 != '\0')

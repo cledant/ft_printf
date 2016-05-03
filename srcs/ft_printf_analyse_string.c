@@ -6,7 +6,7 @@
 /*   By: cledant <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/19 14:25:34 by cledant           #+#    #+#             */
-/*   Updated: 2016/05/02 17:02:59 by cledant          ###   ########.fr       */
+/*   Updated: 2016/05/03 13:23:03 by cledant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@ static char		*ft_create_char(size_t len, char *format)
 {
 	char	*type;
 
-	if ((type = ft_strnew(len)) == NULL )
-		return NULL;
+	if ((type = ft_strnew(len)) == NULL)
+		return (NULL);
 	else
 		ft_memcpy(type, format, len);
 	return (type);
@@ -53,7 +53,7 @@ char			*ft_printf_analyse_string(char *format)
 		else if (flag_flag >= 4 && ft_strncmp(cpy_format, ".", 1) == 0)
 		{
 			if (same_flag[0] > 0)
-				return NULL;
+				return (NULL);
 			len++;
 			cpy_format++;
 			same_flag[0]++;
@@ -69,7 +69,7 @@ char			*ft_printf_analyse_string(char *format)
 					ft_printf_is_modifier(cpy_format)) > 0)
 		{
 			if (same_flag[1] > 0)
-				return NULL;
+				return (NULL);
 			same_flag[1]++;
 			len += res_flag_2;
 			cpy_format += res_flag_2;
@@ -81,7 +81,7 @@ char			*ft_printf_analyse_string(char *format)
 			return (ft_create_char(len, format));
 		}
 		else
-			return NULL;
+			return (NULL);
 	}
-	return NULL;
+	return (NULL);
 }
