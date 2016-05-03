@@ -6,7 +6,7 @@
 /*   By: cledant <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/19 10:55:21 by cledant           #+#    #+#             */
-/*   Updated: 2016/05/03 19:37:38 by cledant          ###   ########.fr       */
+/*   Updated: 2016/05/03 20:23:37 by cledant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,9 @@
 
 # include "libft.h"
 # include <stdarg.h>
-# include <limits.h>
+
+# define LONG_MIN (-__LONG_MAX__ -1L)
+# define LLONG_MIN (-__LONG_LONG_MAX__-1LL)
 
 typedef struct	s_flags
 {
