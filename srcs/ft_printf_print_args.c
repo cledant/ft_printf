@@ -6,7 +6,7 @@
 /*   By: cledant <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/20 19:21:49 by cledant           #+#    #+#             */
-/*   Updated: 2016/05/02 17:28:38 by cledant          ###   ########.fr       */
+/*   Updated: 2016/05/03 19:39:59 by cledant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,11 +36,13 @@ static int		ft_length_2(t_flags *flag, va_list list_arg)
 	else if (flag->type == 9)
 		len = ft_printf_llu(list_arg, flag);
 	else if (flag->type == 10)
-		len = ft_printf_llxX(list_arg, 0, flag);
+		len = ft_printf_llxx(list_arg, 0, flag);
 	else if (flag->type == 11)
-		len = ft_printf_llxX(list_arg, 1, flag);
+		len = ft_printf_llxx(list_arg, 1, flag);
 	else if (flag->type == 12)
 		len = ft_printf_lc(list_arg, flag);
+	else if (flag->type == 100)
+		len = ft_printf_other(flag);
 	return (len);
 }
 
@@ -68,11 +70,13 @@ static int		ft_length_1(t_flags *flag, va_list list_arg)
 	else if (flag->type == 9)
 		len = ft_printf_lu(list_arg, flag);
 	else if (flag->type == 10)
-		len = ft_printf_lxX(list_arg, 0, flag);
+		len = ft_printf_lxx(list_arg, 0, flag);
 	else if (flag->type == 11)
-		len = ft_printf_lxX(list_arg, 1, flag);
+		len = ft_printf_lxx(list_arg, 1, flag);
 	else if (flag->type == 12)
 		len = ft_printf_lc(list_arg, flag);
+	else if (flag->type == 100)
+		len = ft_printf_other(flag);
 	return (len);
 }
 
@@ -102,9 +106,9 @@ static int		ft_length_0(t_flags *flag, va_list list_arg)
 	else if (flag->type == 9)
 		len = ft_printf_lu(list_arg, flag);
 	else if (flag->type == 10)
-		len = ft_printf_xX(list_arg, 0, flag);
+		len = ft_printf_xx(list_arg, 0, flag);
 	else if (flag->type == 11)
-		len = ft_printf_xX(list_arg, 1, flag);
+		len = ft_printf_xx(list_arg, 1, flag);
 	else if (flag->type == 12)
 		len = ft_printf_c(list_arg, flag);
 	else if (flag->type == 13)
@@ -128,7 +132,7 @@ static int		ft_length_minus_1(t_flags *flag, va_list list_arg)
 	else if (flag->type == 3)
 		len = ft_printf_hd(list_arg, flag);
 	else if (flag->type == 4)
-		len = ft_printf_hD(list_arg, flag);
+		len = ft_printf_hdd(list_arg, flag);
 	else if (flag->type == 5)
 		len = ft_printf_hd(list_arg, flag);
 	else if (flag->type == 6)
@@ -140,13 +144,15 @@ static int		ft_length_minus_1(t_flags *flag, va_list list_arg)
 	else if (flag->type == 9)
 		len = ft_printf_lu(list_arg, flag);
 	else if (flag->type == 10)
-		len = ft_printf_hxX(list_arg, 0, flag);
+		len = ft_printf_hxx(list_arg, 0, flag);
 	else if (flag->type == 11)
-		len = ft_printf_hxX(list_arg, 1, flag);
+		len = ft_printf_hxx(list_arg, 1, flag);
 	else if (flag->type == 12)
 		len = ft_printf_c(list_arg, flag);
 	else if (flag->type == 13)
 		len = ft_printf_lc(list_arg, flag);
+	else if (flag->type == 100)
+		len = ft_printf_other(flag);
 	return (len);
 }
 
@@ -176,13 +182,15 @@ static int		ft_length_minus_2(t_flags *flag, va_list list_arg)
 	else if (flag->type == 9)
 		len = ft_printf_lu(list_arg, flag);
 	else if (flag->type == 10)
-		len = ft_printf_hhxX(list_arg, 0, flag);
+		len = ft_printf_hhxx(list_arg, 0, flag);
 	else if (flag->type == 11)
-		len = ft_printf_hhxX(list_arg, 1, flag);
+		len = ft_printf_hhxx(list_arg, 1, flag);
 	else if (flag->type == 12)
 		len = ft_printf_c(list_arg, flag);
 	else if (flag->type == 13)
 		len = ft_printf_lc(list_arg, flag);
+	else if (flag->type == 100)
+		len = ft_printf_other(flag);
 	return (len);
 }
 

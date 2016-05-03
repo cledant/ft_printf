@@ -6,7 +6,7 @@
 #    By: cledant <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/11/26 10:40:13 by cledant           #+#    #+#              #
-#    Updated: 2016/05/02 17:26:28 by cledant          ###   ########.fr        #
+#    Updated: 2016/05/03 19:40:45 by cledant          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,19 +24,19 @@ SRC_NAME =	ft_printf.c ft_printf_is_converter.c ft_printf_analyse_string.c \
 			ft_printf_fill_modifier.c ft_printf_setup_data.c ft_printf_init_data.c \
 			ft_printf_d.c ft_printf_u.c ft_printf_hex_converter_long_int.c \
 			ft_printf_itoa_unsigned.c ft_printf_o.c ft_printf_octal_converter.c \
-			ft_printf_xX.c ft_printf_hex_converter.c ft_strtoupper.c \
-			ft_printf_ld.c ft_printf_itoa_long_int.c ft_printf_lxX.c \
+			ft_printf_xx.c ft_printf_hex_converter.c ft_strtoupper.c \
+			ft_printf_ld.c ft_printf_itoa_long_int.c ft_printf_lxx.c \
 			ft_printf_lo.c ft_printf_octal_converter_long_int.c ft_printf_lu.c \
 			ft_printf_itoa_unsigned_long_int.c ft_wcharlen.c \
 			ft_printf_s.c ft_printf_c.c ft_wputstr.c ft_printf_ls.c \
 			ft_wstrlen.c ft_wputchar.c ft_printf_lc.c ft_printf_lld.c \
-			ft_printf_llo.c ft_printf_llu.c ft_printf_llxX.c \
+			ft_printf_llo.c ft_printf_llu.c ft_printf_llxx.c \
 			ft_printf_hex_converter_long_long_int.c \
 			ft_printf_octal_converter_long_long_int.c \
 			ft_printf_itoa_long_long_int.c ft_printf_itoa_unsigned_long_long_int.c \
-			ft_printf_hd.c ft_printf_ho.c ft_printf_hu.c ft_printf_hxX.c \
-			ft_printf_hD.c ft_printf_hhd.c ft_printf_hho.c ft_printf_hhu.c \
-			ft_printf_hhxX.c ft_printf_p.c ft_printf_add_front_string.c \
+			ft_printf_hd.c ft_printf_ho.c ft_printf_hu.c ft_printf_hxx.c \
+			ft_printf_hdd.c ft_printf_hhd.c ft_printf_hho.c ft_printf_hhu.c \
+			ft_printf_hhxx.c ft_printf_p.c ft_printf_add_front_string.c \
 			ft_printf_chain_modifier.c ft_printf_chain_modifier_ull.c \
 			ft_printf_mod_precision.c ft_printf_mod_rm_preci.c ft_printf_mod_size.c\
 			ft_printf_mod_precision_str_simple.c ft_wstrdup.c ft_wstrcpy.c \

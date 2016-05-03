@@ -6,7 +6,7 @@
 /*   By: cledant <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/19 10:55:21 by cledant           #+#    #+#             */
-/*   Updated: 2016/05/02 17:26:00 by cledant          ###   ########.fr       */
+/*   Updated: 2016/05/03 19:37:38 by cledant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 # include <stdarg.h>
 # include <limits.h>
 
-typedef struct	flags
+typedef struct	s_flags
 {
 	int			space;
 	int			sharp;
@@ -52,26 +52,26 @@ int				ft_printf_u(va_list list_arg, t_flags *flag);
 int				ft_printf_p(va_list list_arg, t_flags *flag);
 int				ft_printf_o(va_list list_arg, t_flags *flag);
 int				ft_printf_other(t_flags *flag);
-int				ft_printf_xX(va_list list_arg, int maj, t_flags *flag);
+int				ft_printf_xx(va_list list_arg, int maj, t_flags *flag);
 int				ft_printf_ls(va_list list_arg, t_flags *flag);
 int				ft_printf_lc(va_list list_arg, t_flags *flag);
 int				ft_printf_ld(va_list list_arg, t_flags *flag);
 int				ft_printf_lo(va_list list_arg, t_flags *flag);
 int				ft_printf_lu(va_list list_arg, t_flags *flag);
-int				ft_printf_lxX(va_list list_arg, int maj, t_flags *flag);
+int				ft_printf_lxx(va_list list_arg, int maj, t_flags *flag);
 int				ft_printf_lld(va_list list_arg, t_flags *flag);
 int				ft_printf_llo(va_list list_arg, t_flags *flag);
 int				ft_printf_llu(va_list list_arg, t_flags *flag);
-int				ft_printf_llxX(va_list list_arg, int maj, t_flags *flag);
+int				ft_printf_llxx(va_list list_arg, int maj, t_flags *flag);
 int				ft_printf_hd(va_list list_arg, t_flags *flag);
-int				ft_printf_hD(va_list list_arg, t_flags *flag);
+int				ft_printf_hdd(va_list list_arg, t_flags *flag);
 int				ft_printf_ho(va_list list_arg, t_flags *flag);
 int				ft_printf_hu(va_list list_arg, t_flags *flag);
-int				ft_printf_hxX(va_list list_arg, int maj, t_flags *flag);
+int				ft_printf_hxx(va_list list_arg, int maj, t_flags *flag);
 int				ft_printf_hhd(va_list list_arg, t_flags *flag);
 int				ft_printf_hho(va_list list_arg, t_flags *flag);
 int				ft_printf_hhu(va_list list_arg, t_flags *flag);
-int				ft_printf_hhxX(va_list list_arg, int maj, t_flags *flag);
+int				ft_printf_hhxx(va_list list_arg, int maj, t_flags *flag);
 char			*ft_printf_octal_converter(unsigned int n);
 char			*ft_printf_hex_converter(unsigned int n);
 char			*ft_printf_octal_converter_long_int(unsigned long int n);
