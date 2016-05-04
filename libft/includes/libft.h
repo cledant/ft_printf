@@ -6,7 +6,7 @@
 /*   By: cledant <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/23 12:12:52 by cledant           #+#    #+#             */
-/*   Updated: 2016/04/21 09:34:50 by cledant          ###   ########.fr       */
+/*   Updated: 2016/05/04 20:32:30 by cledant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -138,6 +138,6 @@ char				**ft_strnew_char2(size_t size);
 void				ft_putendl_char2(char **str);
 void				ft_switch_char2(char ***str1, char ***str2);
 void				ft_lstfree_malloc(void *content, size_t size);
-int					ft_printf(const char* restrict format, ...);
+int					ft_printf(const char *restrict format, ...);
 
 #endif
