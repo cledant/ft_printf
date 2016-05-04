@@ -6,7 +6,7 @@
 /*   By: cledant <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/04 11:04:50 by cledant           #+#    #+#             */
-/*   Updated: 2016/05/04 11:21:04 by cledant          ###   ########.fr       */
+/*   Updated: 2016/05/04 20:11:12 by cledant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,13 +46,13 @@ int			ft_printf_length_minus_1(t_flags *flag, va_list list_arg)
 	else if (flag->type == 3)
 		len = ft_printf_hd(list_arg, flag);
 	else if (flag->type == 4)
-		len = ft_printf_hdd(list_arg, flag);
+		len = ft_printf_ld(list_arg, flag);
 	else if (flag->type == 5)
 		len = ft_printf_hd(list_arg, flag);
 	else if (flag->type == 6)
 		len = ft_printf_ho(list_arg, flag);
 	else if (flag->type == 7)
-		len = ft_printf_ho(list_arg, flag);
+		len = ft_printf_lo(list_arg, flag);
 	else if (flag->type == 8)
 		len = ft_printf_hu(list_arg, flag);
 	else
