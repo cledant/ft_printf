@@ -6,7 +6,7 @@
 /*   By: cledant <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/19 10:55:21 by cledant           #+#    #+#             */
-/*   Updated: 2016/05/04 10:41:50 by cledant          ###   ########.fr       */
+/*   Updated: 2016/05/04 12:40:30 by cledant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -115,6 +115,7 @@ int				ft_printf_length_minus_1(t_flags *flags, va_list list_args);
 int				ft_printf_length_0(t_flags *flags, va_list list_args);
 int				ft_printf_length_1(t_flags *flags, va_list list_args);
 int				ft_printf_length_2(t_flags *flags, va_list list_args);
+void			ft_printf_set_flag_zero_sc(t_flags *f);
 void			ft_strtoupper(char *s);
 char			*ft_str_front_n_remove(char *s, size_t len);
 void			ft_wputchar(wchar_t c);
