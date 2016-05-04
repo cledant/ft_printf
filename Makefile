@@ -6,7 +6,7 @@
 #    By: cledant <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/11/26 10:40:13 by cledant           #+#    #+#              #
-#    Updated: 2016/05/03 19:40:45 by cledant          ###   ########.fr        #
+#    Updated: 2016/05/04 10:51:23 by cledant          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -46,7 +46,9 @@ SRC_NAME =	ft_printf.c ft_printf_is_converter.c ft_printf_analyse_string.c \
 			ft_printf_mod_size_zero_hex.c ft_printf_mod_size_zero_w.c \
 			ft_printf_add_n_behind_string.c ft_str_front_n_remove.c \
 			ft_printf_mod_size_zero_string.c ft_wstrjoin.c \
-			ft_printf_add_n_behind_w_string.c ft_printf_other.c
+			ft_printf_add_n_behind_w_string.c ft_printf_other.c \
+			ft_printf_length_0.c ft_printf_length_1.c ft_printf_length_2.c \
+			ft_printf_length_minus_1.c ft_printf_length_minus_2.c
 
 SRC_PATH = ./srcs/
 
