@@ -49,7 +49,8 @@ SRC_NAME =	ft_printf.c ft_printf_is_converter.c ft_printf_analyse_string.c \
 			ft_printf_add_n_behind_w_string.c ft_printf_other.c \
 			ft_printf_length_0.c ft_printf_length_1.c ft_printf_length_2.c \
 			ft_printf_length_minus_1.c ft_printf_length_minus_2.c \
-			ft_printf_set_flag_zero_sc.c ft_printf_init_analyse.c
+			ft_printf_set_flag_zero_sc.c ft_printf_init_analyse.c \
+			ft_printf_length_j.c ft_printf_length_z.c
 
 SRC_PATH = ./srcs/
 

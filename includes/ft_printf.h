@@ -113,6 +113,8 @@ int				ft_printf_length_minus_2(t_flags *flags, va_list list_args);
 int				ft_printf_length_minus_1(t_flags *flags, va_list list_args);
 int				ft_printf_length_0(t_flags *flags, va_list list_args);
 int				ft_printf_length_1(t_flags *flags, va_list list_args);
+int				ft_printf_length_j(t_flags *flags, va_list list_args);
+int				ft_printf_length_z(t_flags *flags, va_list list_args);
 int				ft_printf_length_2(t_flags *flags, va_list list_args);
 void			ft_printf_set_flag_zero_sc(t_flags *f);
 void			ft_printf_init_analyse(int *flag_flag, size_t *len,
