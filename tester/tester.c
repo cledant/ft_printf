@@ -6,13 +6,15 @@
 /*   By: cledant <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/03 12:38:21 by cledant           #+#    #+#             */
-/*   Updated: 2016/05/04 20:14:46 by cledant          ###   ########.fr       */
+/*   Updated: 2016/05/10 12:47:47 by cledant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <locale.h>
 #include <stdio.h>
-#include "ft_printf.h"
 #include <limits.h>
+
+int		ft_printf(const char *restrict format, ...);
 
 int		main(void)
 {
@@ -26,6 +28,8 @@ int		main(void)
 	real_total = 0;
 	me = 0;
 	real = 0;
+
+	setlocale(LC_ALL, "en_US.UTF-8");
 
 	ft_putendl("=============TEST LL===============");
 
@@ -90,11 +94,11 @@ int		main(void)
 	ft_putendl("");
 
 	ft_putstr("FT_PRINTF : ");
-	me = ft_printf("%llp\n", ptr_test);
+	me = ft_printf("%llp\n", &ptr_test);
 	me_total += me;
 	ft_putnbrendl(me);
 	ft_putstr("___PRINTF : ");
-	real = printf("%llp\n", ptr_test);
+	real = printf("%llp\n", &ptr_test);
 	real_total += real;
 	ft_putnbrendl(real);
 	ft_putendl("");
@@ -113,10 +117,10 @@ int		main(void)
 	me = ft_printf("%llS\n", L"coucou 42 に");
 	me_total += me;
 	ft_putnbrendl(me);
-//	ft_putstr("___PRINTF : ");
-//	real = printf("%llS\n", L"coucou 42 に");
-//	real_total += real;
-//	ft_putnbrendl(real);
+	ft_putstr("___PRINTF : ");
+	real = printf("%llS\n", L"coucou 42 に");
+	real_total += real;
+	ft_putnbrendl(real);
 	ft_putendl("");
 
 	ft_putstr("FT_PRINTF : ");
@@ -133,10 +137,10 @@ int		main(void)
 	me = ft_printf("%llC\n", L'に');
 	me_total += me;
 	ft_putnbrendl(me);
-//	ft_putstr("___PRINTF : ");
-//	real = printf("%llC\n", L'に');
-//	real_total += real;
-//	ft_putnbrendl(real);
+	ft_putstr("___PRINTF : ");
+	real = printf("%llC\n", L'に');
+	real_total += real;
+	ft_putnbrendl(real);
 	ft_putendl("");
 
 	ft_putstr("FT_PRINTF : ");
@@ -232,11 +236,11 @@ int		main(void)
 	ft_putendl("");
 
 	ft_putstr("FT_PRINTF : ");
-	me = ft_printf("%lp\n", ptr_test);
+	me = ft_printf("%lp\n", &ptr_test);
 	me_total += me;
 	ft_putnbrendl(me);
 	ft_putstr("___PRINTF : ");
-	real = printf("%lp\n", ptr_test);
+	real = printf("%lp\n", &ptr_test);
 	real_total += real;
 	ft_putnbrendl(real);
 	ft_putendl("");
@@ -255,10 +259,10 @@ int		main(void)
 	me = ft_printf("%ls\n", L"coucou 42 に");
 	me_total += me;
 	ft_putnbrendl(me);
-//	ft_putstr("___PRINTF : ");
-//	real = printf("%ls\n", L"coucou 42 に");
-//	real_total += real;
-//	ft_putnbrendl(real);
+	ft_putstr("___PRINTF : ");
+	real = printf("%ls\n", L"coucou 42 に");
+	real_total += real;
+	ft_putnbrendl(real);
 	ft_putendl("");
 
 	ft_putstr("FT_PRINTF : ");
@@ -275,10 +279,10 @@ int		main(void)
 	me = ft_printf("%lc\n", L'に');
 	me_total += me;
 	ft_putnbrendl(me);
-//	ft_putstr("___PRINTF : ");
-//	real = printf("%lc\n", L'に');
-//	real_total += real;
-//	ft_putnbrendl(real);
+	ft_putstr("___PRINTF : ");
+	real = printf("%lc\n", L'に');
+	real_total += real;
+	ft_putnbrendl(real);
 	ft_putendl("");
 
 	ft_putstr("FT_PRINTF : ");
@@ -384,11 +388,11 @@ int		main(void)
 	ft_putendl("");
 
 	ft_putstr("FT_PRINTF : ");
-	me = ft_printf("%p\n", ptr_test);
+	me = ft_printf("%p\n", &ptr_test);
 	me_total += me;
 	ft_putnbrendl(me);
 	ft_putstr("___PRINTF : ");
-	real = printf("%p\n", ptr_test);
+	real = printf("%p\n", &ptr_test);
 	real_total += real;
 	ft_putnbrendl(real);
 	ft_putendl("");
@@ -407,10 +411,10 @@ int		main(void)
 	me = ft_printf("%S\n", L"coucou 42 に");
 	me_total += me;
 	ft_putnbrendl(me);
-//	ft_putstr("___PRINTF : ");
-//	real = printf("%S\n", L"coucou 42 に");
-//	real_total += real;
-//	ft_putnbrendl(real);
+	ft_putstr("___PRINTF : ");
+	real = printf("%S\n", L"coucou 42 に");
+	real_total += real;
+	ft_putnbrendl(real);
 	ft_putendl("");
 
 	ft_putstr("FT_PRINTF : ");
@@ -427,10 +431,10 @@ int		main(void)
 	me = ft_printf("%C\n", L'に');
 	me_total += me;
 	ft_putnbrendl(me);
-//	ft_putstr("___PRINTF : ");
-//	real = printf("%C\n", L'に');
-//	real_total += real;
-//	ft_putnbrendl(real);
+	ft_putstr("___PRINTF : ");
+	real = printf("%C\n", L'に');
+	real_total += real;
+	ft_putnbrendl(real);
 	ft_putendl("");
 
 	ft_putstr("FT_PRINTF : ");
@@ -546,11 +550,11 @@ int		main(void)
 	ft_putendl("");
 
 	ft_putstr("FT_PRINTF : ");
-	me = ft_printf("%hp\n", ptr_test);
+	me = ft_printf("%hp\n", &ptr_test);
 	me_total += me;
 	ft_putnbrendl(me);
 	ft_putstr("___PRINTF : ");
-	real = printf("%hp\n", ptr_test);
+	real = printf("%hp\n", &ptr_test);
 	real_total += real;
 	ft_putnbrendl(real);
 	ft_putendl("");
@@ -569,10 +573,10 @@ int		main(void)
 	me = ft_printf("%hS\n", L"coucou 42 に");
 	me_total += me;
 	ft_putnbrendl(me);
-//	ft_putstr("___PRINTF : ");
-//	real = printf("%S\n", L"coucou 42 に");
-//	real_total += real;
-//	ft_putnbrendl(real);
+	ft_putstr("___PRINTF : ");
+	real = printf("%S\n", L"coucou 42 に");
+	real_total += real;
+	ft_putnbrendl(real);
 	ft_putendl("");
 
 	ft_putstr("FT_PRINTF : ");
@@ -589,10 +593,10 @@ int		main(void)
 	me = ft_printf("%hC\n", L'に');
 	me_total += me;
 	ft_putnbrendl(me);
-//	ft_putstr("___PRINTF : ");
-//	real = printf("%C\n", L'に');
-//	real_total += real;
-//	ft_putnbrendl(real);
+	ft_putstr("___PRINTF : ");
+	real = printf("%C\n", L'に');
+	real_total += real;
+	ft_putnbrendl(real);
 	ft_putendl("");
 
 	ft_putstr("FT_PRINTF : ");
@@ -708,11 +712,11 @@ int		main(void)
 	ft_putendl("");
 
 	ft_putstr("FT_PRINTF : ");
-	me = ft_printf("%hhp\n", ptr_test);
+	me = ft_printf("%hhp\n", &ptr_test);
 	me_total += me;
 	ft_putnbrendl(me);
 	ft_putstr("___PRINTF : ");
-	real = printf("%hhp\n", ptr_test);
+	real = printf("%hhp\n", &ptr_test);
 	real_total += real;
 	ft_putnbrendl(real);
 	ft_putendl("");
@@ -731,10 +735,10 @@ int		main(void)
 	me = ft_printf("%hhS\n", L"coucou 42 に");
 	me_total += me;
 	ft_putnbrendl(me);
-//	ft_putstr("___PRINTF : ");
-//	real = printf("%S\n", L"coucou 42 に");
-//	real_total += real;
-//	ft_putnbrendl(real);
+	ft_putstr("___PRINTF : ");
+	real = printf("%S\n", L"coucou 42 に");
+	real_total += real;
+	ft_putnbrendl(real);
 	ft_putendl("");
 
 	ft_putstr("FT_PRINTF : ");
@@ -751,10 +755,10 @@ int		main(void)
 	me = ft_printf("%hhC\n", L'に');
 	me_total += me;
 	ft_putnbrendl(me);
-//	ft_putstr("___PRINTF : ");
-//	real = printf("%C\n", L'に');
-//	real_total += real;
-//	ft_putnbrendl(real);
+	ft_putstr("___PRINTF : ");
+	real = printf("%C\n", L'に');
+	real_total += real;
+	ft_putnbrendl(real);
 	ft_putendl("");
 
 	ft_putstr("FT_PRINTF : ");
@@ -860,11 +864,11 @@ int		main(void)
 	ft_putendl("");
 
 	ft_putstr("FT_PRINTF : ");
-	me = ft_printf("%jp\n", ptr_test);
+	me = ft_printf("%jp\n", &ptr_test);
 	me_total += me;
 	ft_putnbrendl(me);
 	ft_putstr("___PRINTF : ");
-	real = printf("%jp\n", ptr_test);
+	real = printf("%jp\n", &ptr_test);
 	real_total += real;
 	ft_putnbrendl(real);
 	ft_putendl("");
@@ -883,10 +887,10 @@ int		main(void)
 	me = ft_printf("%jS\n", L"coucou 42 に");
 	me_total += me;
 	ft_putnbrendl(me);
-//	ft_putstr("___PRINTF : ");
-//	real = printf("%llS\n", L"coucou 42 に");
-//	real_total += real;
-//	ft_putnbrendl(real);
+	ft_putstr("___PRINTF : ");
+	real = printf("%llS\n", L"coucou 42 に");
+	real_total += real;
+	ft_putnbrendl(real);
 	ft_putendl("");
 
 	ft_putstr("FT_PRINTF : ");
@@ -903,10 +907,10 @@ int		main(void)
 	me = ft_printf("%jC\n", L'に');
 	me_total += me;
 	ft_putnbrendl(me);
-//	ft_putstr("___PRINTF : ");
-//	real = printf("%llC\n", L'に');
-//	real_total += real;
-//	ft_putnbrendl(real);
+	ft_putstr("___PRINTF : ");
+	real = printf("%llC\n", L'に');
+	real_total += real;
+	ft_putnbrendl(real);
 	ft_putendl("");
 
 	ft_putstr("FT_PRINTF : ");
@@ -1002,11 +1006,11 @@ int		main(void)
 	ft_putendl("");
 
 	ft_putstr("FT_PRINTF : ");
-	me = ft_printf("%zp\n", ptr_test);
+	me = ft_printf("%zp\n", &ptr_test);
 	me_total += me;
 	ft_putnbrendl(me);
 	ft_putstr("___PRINTF : ");
-	real = printf("%zp\n", ptr_test);
+	real = printf("%zp\n", &ptr_test);
 	real_total += real;
 	ft_putnbrendl(real);
 	ft_putendl("");
@@ -1025,10 +1029,10 @@ int		main(void)
 	me = ft_printf("%zS\n", L"coucou 42 に");
 	me_total += me;
 	ft_putnbrendl(me);
-//	ft_putstr("___PRINTF : ");
-//	real = printf("%llS\n", L"coucou 42 に");
-//	real_total += real;
-//	ft_putnbrendl(real);
+	ft_putstr("___PRINTF : ");
+	real = printf("%llS\n", L"coucou 42 に");
+	real_total += real;
+	ft_putnbrendl(real);
 	ft_putendl("");
 
 	ft_putstr("FT_PRINTF : ");
@@ -1045,10 +1049,10 @@ int		main(void)
 	me = ft_printf("%zC\n", L'に');
 	me_total += me;
 	ft_putnbrendl(me);
-//	ft_putstr("___PRINTF : ");
-//	real = printf("%llC\n", L'に');
-//	real_total += real;
-//	ft_putnbrendl(real);
+	ft_putstr("___PRINTF : ");
+	real = printf("%llC\n", L'に');
+	real_total += real;
+	ft_putnbrendl(real);
 	ft_putendl("");
 
 	ft_putstr("FT_PRINTF : ");
@@ -1081,6 +1085,40 @@ int		main(void)
 	ft_putnbrendl(real);
 	ft_putendl("");
 
+
+	ft_putendl("=============NON DET===============");
+
+	ft_putstr("FT_PRINTF : ");
+	me = ft_printf("%.4S\n", L"coucou 42 に");
+	me_total += me;
+	ft_putnbrendl(me);
+	ft_putstr("___PRINTF : ");
+	real = printf("%.4S\n", L"coucou 42 に");
+	real_total += real;
+	ft_putnbrendl(real);
+	ft_putendl("");
+
+	ft_putendl("=============complet===============");
+
+	ft_putstr("FT_PRINTF : ");
+	me = ft_printf("coucou %d ca va\n", 42);
+	me_total += me;
+	ft_putnbrendl(me);
+	ft_putstr("___PRINTF : ");
+	real = printf("coucou %d ca va\n", 42);
+	real_total += real;
+	ft_putnbrendl(real);
+	ft_putendl("");
+
+	ft_putstr("FT_PRINTF : ");
+	me = ft_printf("coucou %s ca va\n", "nop");
+	me_total += me;
+	ft_putnbrendl(me);
+	ft_putstr("___PRINTF : ");
+	real = printf("coucou %s ca va\n", "nop");
+	real_total += real;
+	ft_putnbrendl(real);
+	ft_putendl("");
 
 	return (0);
 }
